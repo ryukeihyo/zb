@@ -1,0 +1,58 @@
+<extend name="_Layout/main"/>
+
+<block name="style">
+    <style type="text/css">
+        .article-title {
+            margin-bottom: 15px;
+        }
+        .article-info {
+            padding: 10px 0px;
+            margin-bottom: 20px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        .article-info ul {
+            margin-bottom: 0px;
+        }
+        .article-body {
+            margin-bottom: 25px;
+        }
+        .article-download .down-icon img {
+            width: 20px;
+        }
+        .article-download .down-name {
+            font-size: 16px;
+            vertical-align: middle;
+        }
+        .article-download .badge {
+            margin-top: 2px;
+        }
+        .article-download .list-group-item {
+            border-style: dashed;
+        }
+    </style>
+</block>
+
+<block name="main">
+    
+	<div class="nrcx">
+            	<div class="nrcx_top"><p>{$info.main_field}</p></div>
+                
+                <div class="nrcx_nav">
+                	{$info.content|parse_content}
+                    
+                </div>
+      </div>
+	
+	
+	
+	
+	
+	
+	
+	
+</block>
+
+<block name="script">
+
+</block>

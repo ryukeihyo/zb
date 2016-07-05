@@ -1,0 +1,58 @@
+<?php
+/**
+ * User: Administrator
+ */
+namespace Home\Controller;
+use Think\Controller;
+/**
+ * 用户控制器
+ * @author jry <598821125@qq.com>
+ */
+class TestController extends HomeController
+{
+    public function index()
+    {
+       $uri="http://localhost/member/cashierSystemInterface";
+       // $uri="http://cs.xn--sxws6r7pv.com/cashierSystemInterface";
+        /*  //        $uri="http://cs.xn--sxws6r7pv.com/cashierSystemInterface";
+          $user_data['id']= '123121';
+          $user_data['username']= '016556998';
+          $user_data['realname']= '刘';
+          $user_data['mobile']  = '13681267777';
+          $user_data['password']= 'e10adc3949ba59abbe56e057f20f883e';
+          $user_data['parentid']= '41636';
+          $user_data['oper_type']= 'insertuser';
+          $re = conn_zebaisystem__interface($user_data,'cashiersystem');
+       //   echo $re;
+          exit;*/
+        $res['cardno']='000051828';
+        $res['amount']='100';
+        $res['optdate']='2016-06-29 12:01:02';
+        $res['integral']='50';
+        $res['branchid']='41623';
+        $res['paytype']='现金-50;银联-10;积分-10;预存-30;';
+        $res['oper_type'] ='insertlog';
+       $ress="oper_type=insertlog&cardno=123456&mobile=18212345678&amount=99.88&integral=123456&branchid=1";
+        $res=json_encode($ress);
+
+        $ch = curl_init($uri);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($ch, CURLOPT_POSTFIELDS,$res);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                'Content-Type: application/json',
+                'Content-Length: ' . strlen($res))
+        );
+
+       $result = curl_exec($ch);
+        echo $result;exit;
+        if($result){
+            echo "插入成功！ ";
+            exit;
+        }else{
+            echo "插入失败！ ";
+            exit;
+        }
+    }
+}
+?>

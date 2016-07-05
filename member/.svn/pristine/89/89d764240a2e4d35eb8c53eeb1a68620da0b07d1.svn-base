@@ -1,0 +1,85 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+// ------------- 消费记录页 ------------
+// ====================================
+var jilu_type;  //消费记录页各子列表名
+var call_ajax_url;
+
+
+
+$(function () {
+// 初次获取Ajax路径
+    if (!call_ajax_url) {
+        call_ajax_url = $("#page_list_box a").attr("href");
+        console.log(call_ajax_url);
+    }
+    //获得当前标签信息
+    $("#xaiofei_button_list>li").click(function () {
+        $(this).addClass("current").siblings().removeClass("current");
+        jilu_type = $(this).children().attr("rel");
+        jilu_list_pub();
+        return false;
+    });
+
+    $("#xaiofei_button_list>li").eq(0).click();
+    $("#page_list_box").on("click","a", function () {
+        call_ajax_url = $(this).attr("href");
+        console.log(call_ajax_url);
+        return false;
+    });
+
+    function jilu_list_pub() {
+        console.log(jilu_type);
+        $.ajax({
+            url: "jsondata/jilu.json.js",
+            type: "GET",
+            timeout: 300000,
+            global: true,
+            cache: false,
+            data: {
+                ajax: 1
+            },
+            success: function (data, testStatus) {
+                //alert(data);
+                $("#xiaofei_table_list tbody").html();
+                i = 0;
+                while (data[i]) {
+                    //alert(data[i].uid);
+                    ins_html_tr = "<tr><td>"
+                            + data[i].uid + "</td><td>"
+                            + data[i].platform + "</td><td>"
+                            + data[i].fmoney + "</td><td>"
+                            + data[i].addtime + "</td><td>"
+                            + data[i].realname + "</td><td>"
+                            + data[i].beizhu + "</td></tr>";
+                    $("#xiaofei_table_list tbody").append(ins_html_tr);
+                    i++;
+                }
+                $("#page_list_box ul").html(data.page_show);
+            },
+            error: function () {
+                alert("加载失败");
+            },
+            dataType: "json"
+        });
+
+        /*      
+         $.getJSON("jsondata/jilu.json.js", function (json) {
+         alert(json);
+         });
+         */
+
+
+    }
+
+
+
+
+
+});
+
+

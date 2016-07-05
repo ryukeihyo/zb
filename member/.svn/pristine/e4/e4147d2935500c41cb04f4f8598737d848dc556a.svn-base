@@ -1,0 +1,128 @@
+<extend name="_Layout/main"/>
+
+<block name="style">
+    <style type="text/css">
+        /* 文章列表样式 */
+        .article-list .media {
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        .article-list .list-cover{
+            width: 180px;
+            height: 100px;
+        }
+        .article-list .list-title{
+            margin-top: 6px;
+        }
+        .article-list .list-abstract{
+            height: 42px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        @media (max-width: 768px) {
+            .article-list .list-title{
+                font-size: 14px;
+                margin: 0px;
+            }
+            .article-list .list-cover{
+                width: 90px;
+                height: 66px;
+            }
+            .article-list .list-info {
+                font-size: 10px;
+                margin-top: 3px !important;
+                margin-bottom: 2px !important;
+            }
+            .article-list .list-abstract{
+                height: 36px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</block>
+
+<block name="main">
+     <!--员工信息开始-->
+            <div class="nrcx">
+            	<div class="nrcx_top"><p>提现管理</p></div>
+                
+                <div class="zclb">
+					
+                	<table cellpadding="0" cellspacing="0" class="sjjf">
+                    	<tr>
+                        	<td >编         号</td>
+                            <td><input type="text"  style="width:250px" value="{$user_info.username}" readonly /></td>
+                            <td>&nbsp;&nbsp;名         称</td>
+                            <td><input type="text" style="width:250px" value="{$user_info.realname}" readonly /></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td >开户银行</td>
+                            <td><input type="text" style="width:250px" value="{$user_info.bank}" readonly /></td>
+                            <td>&nbsp;&nbsp;银行账户</td>
+                            <td><input type="text" style="width:250px"  value="{$user_info.bank_account}" readonly /></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td >开户姓名</td>
+                            <td><input type="text" style="width:250px" value="{$user_info.bank_name}" readonly /></td>
+                            <td>&nbsp;&nbsp;开户地址</td>
+                            <td><input type="text" style="width:250px" value="{$user_info.bank_address}" readonly /></td>
+                        </tr>
+                        <form method="post" action="{:U('Home/Bonus/pay')}">
+                        <tr>
+                        	<td >分红金额</td>
+                            <td><input type="text" style="width:250px" value="{$user_info.money}" readonly /></td>
+                            <td>&nbsp;&nbsp;<span>*</span>提现金额</td>
+                            <td><input type="text" name="money" style="width:250px"/></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td colspan="4" style="color:#f00;">温馨提示：提现金额为100元的整倍数</td>
+                        </tr>
+                        <tr>
+                        	<td colspan="2" class="sub"><input type="submit" value="提交" style="width:101px; height:30px; margin-right:15px; float:right; font-size:16px; color:#fff;" /></td>
+                            <td colspan="2" class="sub" align="left"><input type="reset" value="重置" style="width:101px; height:30px; float:left; font-size:16px; color:#fff; margin-left:15px;" /></td>
+                        </tr>
+						</form>
+                    </table>
+                  
+                    <table cellpadding="0" cellspacing="0" class="biao1" style="border-collapse:collapse;">
+                    	<tr>
+                        	<th>序号</th>
+                            <th>用户编号</th>
+                            <th>用户名称</th>
+                            <th>提现金额</th>
+                            <th>申请时间</th>
+                            <th>处理时间</th>
+                            <th>状态</th>
+                        </tr>
+                        
+						<volist name="volist" id="vo" empty="$empty">
+						 
+						  <tr>
+                        	<td>{$i}</td>
+                            <td>{$user_info.username}</td>
+                            <td>{$user_info.realname}</td>
+                            <td>{$vo.money}</th>
+                            <td>{$vo.addtime|time_format='Y-m-d H:i:s'}</td>
+                            <td><if condition="$vo[uptime] neq 0 ">{$vo.uptime|time_format='Y-m-d H:i:s'} <else />无</if></td>
+							<td>
+							<input type="button" <if condition="$vo[status] eq 1 ">value="已处理" <else />value="已提交"</if>  style=" background:#00a3ec;width:50px; border:none; color:#fff;" /></td>
+                        </tr>
+	
+
+                        </volist>
+
+                        
+
+                        
+                       
+                    </table>
+                    <div class="fy">
+                    	<p>{$page}</p>
+                    </div>
+                </div>
+            </div>
+            <!--员工信息开始-->
+</block>

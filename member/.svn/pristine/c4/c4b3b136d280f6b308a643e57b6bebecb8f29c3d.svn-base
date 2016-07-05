@@ -1,0 +1,48 @@
+
+
+<block name="main">
+
+<table cellpadding="0" cellspacing="0" border="1" >
+                    	<tr>
+                        	<th>序号</th>
+                            <th>商家编号</th>
+                            <th>商家名称</th>
+                            <th>负责人姓名</th>
+                            <th>联系电话</th>
+                            <th>注册会员数</th>
+                            <th>累计积分</th>
+                        </tr>
+                        
+						
+						
+						 <volist name="volist" id="vo" empty="$empty">
+						 
+						 <tr>
+                        	<td>{$i}</td>
+                            <td>{$vo.username}</td>
+                            <td>{$vo.platform}</td>
+                            <td>{$vo.realname}</td>
+                            <td>{$vo.servicetel}</td>
+                            <td>{$vo.memebers}</th>
+                            <td>{$vo.jifen}</td>
+                        </tr>
+
+                        </volist>
+						
+						
+						
+						
+						
+						
+                        
+                        
+                        
+                        
+                    </table>                  
+
+
+				  
+              
+
+
+</block>

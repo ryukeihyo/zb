@@ -1,0 +1,90 @@
+<extend name="_Layout/main"/>
+
+<block name="style">
+    <style type="text/css">
+        /* 文章列表样式 */
+        .article-list .media {
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        .article-list .list-cover{
+            width: 180px;
+            height: 100px;
+        }
+        .article-list .list-title{
+            margin-top: 6px;
+        }
+        .article-list .list-abstract{
+            height: 42px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        @media (max-width: 768px) {
+            .article-list .list-title{
+                font-size: 14px;
+                margin: 0px;
+            }
+            .article-list .list-cover{
+                width: 90px;
+                height: 66px;
+            }
+            .article-list .list-info {
+                font-size: 10px;
+                margin-top: 3px !important;
+                margin-bottom: 2px !important;
+            }
+            .article-list .list-abstract{
+                height: 36px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</block>
+
+<block name="main">
+<!--员工信息开始-->
+            <div class="nrcx">
+            	<div class="nrcx_top"><p>泽百币充值</p></div>
+                
+                <div class="zclb">
+					
+                    <table cellpadding="0" cellspacing="0" class="biao1" style="border-collapse:collapse;min-height:40px">
+                    	<tr>
+                        	<th>序号</th>
+                            <th>购买数量</th>
+                            <th>泽百币余额</th>
+                            <th>添加时间</th>
+                            <th>确认时间</th>
+                            <th>操作</th>
+                        </tr>
+                         <volist name="volist" id="vo" empty="$empty">
+						 
+						 <tr>
+                        	<td>{$i}</td>
+                            <td>{$vo.number}</td>
+                            <td>{$vo.yue}</th>
+                            <td>{$vo.add_time|time_format='Y-m-d'}</td>
+                            <td><if condition="$vo[confirm_time] neq '' ">{$vo.confirm_time|time_format='Y-m-d'}</if></td>
+                            <td><input type="button" <if condition="$vo[status] eq 1 ">value="已确认"<else />value="确认" onclick="if( confirm('是否确认？'))window.location.href='{:U('Home/Finance/confirm')}?id={$vo.id}'"</if>
+
+								
+
+
+							style=" background:#00a3ec;width:50px; border:none; color:#fff;" /></td>
+                        </tr>
+
+                        </volist>
+
+                        
+                     
+
+                    </table>
+                    <div class="fy">
+                    	<p>{$page}</p>
+                    </div>
+                </div>
+            </div>
+            <!--员工信息开始-->
+
+
+</block>

@@ -1,0 +1,103 @@
+<extend name="_Layout/main"/>
+
+<block name="style">
+    <style type="text/css">
+        /* 文章列表样式 */
+        .article-list .media {
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        .article-list .list-cover{
+            width: 180px;
+            height: 100px;
+        }
+        .article-list .list-title{
+            margin-top: 6px;
+        }
+        .article-list .list-abstract{
+            height: 42px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        @media (max-width: 768px) {
+            .article-list .list-title{
+                font-size: 14px;
+                margin: 0px;
+            }
+            .article-list .list-cover{
+                width: 90px;
+                height: 66px;
+            }
+            .article-list .list-info {
+                font-size: 10px;
+                margin-top: 3px !important;
+                margin-bottom: 2px !important;
+            }
+            .article-list .list-abstract{
+                height: 36px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</block>
+
+<block name="main">
+     <div class="nrcx">
+            	<div class="nrcx_top"><p style="float:left">我的分红</p> <span style="float:right;line-height:40px;padding-right:30px">我的泽百币：<b style="color:red">{$user_info.zebaib}</b></span></div>
+                
+                <div class="zclb">
+                	<table cellpadding="0" cellspacing="0" class="fh">
+                    	<tr>
+                        	<td >上次分红</td>
+                            <td><input type="text" style="width:260px" value="{$money}" readonly /></td>
+                            <td>&nbsp;&nbsp;累计分红</td>
+                            <td><input type="text" style="width:260px" value="{$infototal}" readonly /></td>
+                        </tr>
+                        <form method="post" action="">
+                        <tr>
+                        	<td >分红余额</td>
+                            <td><input type="text" style="width:260px" value="{$user_info.money}" readonly  /></td>
+                            <td>&nbsp;&nbsp;<span>*</span>转入泽百币</td>
+                            <td><input type="text" name="money" style="width:260px" /></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td colspan="2" class="sub"><input type="submit" value="提交" style="width:101px; height:30px; margin-right:15px; float:right; font-size:16px; color:#fff;" /></td>
+                            <td colspan="2" class="sub" align="left"><input type="button" value="返回" style="width:101px; height:30px; float:left; font-size:16px; color:#fff; margin-left:15px;" /></td>
+                        </tr>
+						</form>
+                    </table>
+                    
+                    <table cellpadding="0" cellspacing="0" class="biao1" style="border-collapse:collapse;">
+                    	<tr>
+                        	<th>序号</th>
+                            <th>用户编号</th>
+                            <th>用户名称</th>
+                            <th>分红余额</th>
+                            <th>转入泽百币</th>
+                            <th>转币时间</th>
+                        </tr>
+                        
+                       	 <volist name="volist" id="vo" empty="$empty">
+						 
+						  <tr>
+                        	<td>{$i}</td>
+                            <td>{$user_info.username}</td>
+                            <td>{$user_info.realname}</td>
+                            <td>{$vo.yue}</th>
+                            <td>{$vo.money}</td>
+                            <td>{$vo.addtime|time_format='Y-m-d H:i:s'}</td>
+                        </tr>
+	
+
+                        </volist>
+                        
+                       
+                        
+                    </table>
+                    <div class="fy">
+                    	<p>{$page}</p>
+                    </div>
+                </div>
+            </div>
+</block>

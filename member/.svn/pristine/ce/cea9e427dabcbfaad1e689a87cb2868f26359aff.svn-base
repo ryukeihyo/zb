@@ -1,0 +1,161 @@
+<extend name="_Layout/main_ledger"/>
+
+<block name="style">
+    <link rel="stylesheet" href="__PUBLIC__/css/ledger.css">
+</block>
+<block name="libs">
+    <script src="__PUBLIC__/libs/chart/1.x/Chart.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/libs/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/laydate/laydate.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/ledger.js"></script>
+</block>
+
+<block name="container">
+
+    <div id="ledger_box">
+        <div id="ledger_tool_box">
+            <div id="search_tools_box">
+                <ul id="search_input_list">
+                    <li>
+                        时间  从<input id="start_date" type="date">
+                        至<input id="end_date" type="date">
+                    </li>
+                    <li id="button_deadline">
+                        <span id="button_day" >近一天</span>
+                        <span id="button_week" >近一周</span>
+                        <span id="button_month" >近一月</span>
+                        <span id="button_trimester">近三个月</span>
+                        <span id="button_halfyear">近半年</span>
+                        <span id="button_year">近一年</span>
+                    </li>
+
+                </ul>
+                <!--<div id="button_search">查询</div>-->
+            </div>
+            <div id="button_export_data">导出表单</div>
+        </div>
+
+        <div class="ledger_tabs">
+            <ul class="multipage_menu">
+                <li id="load_start_click" class="current"><a href="#" rel="jifen_total">积分充值总额</a></li>
+                <li><a href="#" rel="jifen_yue">积分当前余额</a></li>
+                <li><a href="#" rel="zebaib_total">泽百币充值总额</a></li>
+                <li><a href="#" rel="zebaib_yue">泽百币当前余额</a></li>
+                <li><a href="#" rel="yucun_total">预存消费总额</a></li>
+                <li><a href="#" rel="yucun_yue">预存消费余额</a></li>
+            </ul>
+        </div>
+        <p id="search_info"></p>
+        <p id="know_info"></p>
+        <div class="ledger_panes">
+            <ul id="chongzhi_table_list" class="multipage_body">
+                <li>
+                    <!--  积分充值总额   -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>商家名称</th>
+                                <th>充值总额</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <div class="page_list_box">
+                        <ul>
+                            <li id="call_ajax_url" class="active current"><a href="{:U('Admin/rechargeBalance/index')}">1</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <!--  积分当前余额  -->  
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>商家名称</th>
+                                <th>积分余额</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <div class="page_list_box"><ul></ul></div>
+                </li>
+                <li>
+                    <!--泽百币充值总额-->
+                    <h3>待定</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <div class="page_list_box"><ul></ul></div>
+                </li>
+                <li>
+                    <!--  泽百币当前余额  --> 
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>用户名</th>
+                                <th>卡号</th>
+                                <th>姓名</th>
+                                <th>泽百币余额</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <div class="page_list_box"><ul></ul></div>
+                </li>
+                <li>
+                    <!-- 预存消费总额  -->
+                    <h3>待定</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <div class="page_list_box"><ul></ul></div>
+                </li>
+                <li>
+                    <!--  预存消费余额  -->
+                    <h3>待定</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <div class="page_list_box"><ul></ul></div>
+                </li>
+            </ul>
+
+
+
+        </div>
+
+        <div id="pop_box">
+            <div class="pop_box_close_button">X</div>
+            数据加载中，请稍候……
+        </div>
+</block>

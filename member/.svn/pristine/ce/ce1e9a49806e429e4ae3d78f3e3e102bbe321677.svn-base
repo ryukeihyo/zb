@@ -1,0 +1,154 @@
+<extend name="_Layout/system2"/>
+
+<block name="title"><title>{:C('WEB_SITE_TITLE')}－{:C('WEB_SITE_SLOGAN')}</title></block>
+
+<block name="breadcrumb"></block>
+
+<block name="style">
+    <style type="text/css">
+        .main-nav {
+            margin-bottom: 0px;
+        }
+        #my-slide {
+            margin-bottom: 20px;
+        }
+        #my-slide .slider1 .btn-default-inverse:hover,
+        #my-slide .slider1 .btn-default-inverse.hover,
+        #my-slide .slider1 .btn-default-inverse.active {
+            color: #65b72f;
+        }
+        #my-slide .slider2 .btn-default-inverse:hover,
+        #my-slide .slider2 .btn-default-inverse.hover,
+        #my-slide .slider2 .btn-default-inverse.active {
+            color: #047ecc;
+        }
+        .feature-title {
+            margin-bottom: 15px;
+        }
+        .feature-list .thumbnail .lazy{
+            width: 100%;
+            height: 126px;
+        }
+        .feature-list .thumbnail .caption p{
+            height: 80px;
+            overflow: hidden;
+        }
+        @media (max-width: 768px) {
+            #my-slide .btn {
+                margin-bottom: 8px;
+            }
+            .feature-list .thumbnail .caption p{
+                height: auto;
+            }
+        }
+    </style>
+</block>
+
+<block name="script">
+    <script type="text/javascript" src="__PUBLIC__/libs/jquery_devrama_slider/jquery.devrama.slider.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#my-slide').DrSlider({
+                width: '100%',
+                height: '500px',
+                userCSS: false,
+                transitionSpeed: 1000,
+                duration: 8000,
+                transition: 'random',
+                showNavigation: true,
+                navigationType: 'circle',
+                positionNavigation: 'in-center-bottom',
+                navigationColor: 'rgb(223,223,223)',
+                navigationHoverColor: '#00A4FF',
+                navigationHighlightColor: '#00A4FF',
+                showProgress: true,
+                progressColor: '#fff',
+                pauseOnHover: true
+            });
+        });
+    </script>
+</block>
+
+<block name="jumbotron">
+    
+</block>
+
+<block name="main">
+    <div class="nrcx">
+            	<div class="nrcx_top"><p>员工信息</p></div>
+                
+                <div class="nrcx_nav">
+                	<img src="images/tu.jpg" />
+                    <p>中秋时节，9月23日至25日，中共中央政治局常委、国务院总理李克强来到了秋阳朗照、硕果累累的中原大地。</p>
+                    <p>作为曾在河南工作生活七年之久的老书记，李克强总理一直情牵中原热土、心系父老乡亲。他说，我以曾作为河南人民的一员而引以为荣，并将不断从我所体会到的河南人民的宝贵品格中汲取智慧和力量。他坦言，来到河南，我有一种回家的感觉。</p>
+                    <p>在万家团圆、农事丰收的乙未中秋到来之际，总理“回家”了！</p>
+                    <p>依然是风尘仆仆、昼夜兼程，在省委书记郭庚茂、省长谢伏瞻等陪同下，总理深入洛阳、许昌、郑州，一路上谈改革、论发展，体民情、察民生，访故地、看变化，总理的脚步，深深印在中原大地；总理的情怀，深深留在人民心中。</p>
+                    <p>中秋时节，9月23日至25日，中共中央政治局常委、国务院总理李克强来到了秋阳朗照、硕果累累的中原大地。</p>
+                    <p>作为曾在河南工作生活七年之久的老书记，李克强总理一直情牵中原热土、心系父老乡亲。他说，我以曾作为河南人民的一员而引以为荣，并将不断从我所体会到的河南人民的宝贵品格中汲取智慧和力量。他坦言，来到河南，我有一种回家的感觉。</p>
+                    
+                </div>
+      </div>
+</block>
+
+<block name="news">
+  <!--单块开始-->
+        <div class="in3x h0">
+            <div class="in3d fl">
+                <img src="__PUBLIC__/images/xw.jpg" />
+                <ul class="in3dl">
+                    <volist name="volists" id="vo">
+					<li><a href="{:U('Document/detail/id/'.$vo['id'])}">{$vo.title}</a></li>
+					</volist>
+                </ul>
+            </div>
+            
+            <div class="in3d fl">
+                <img src="__PUBLIC__/images/xw.jpg" />
+                <ul class="in3dl">
+                    <li><a href="">河南工匠称月入1万多 李克强：待遇要提高</a></li>
+                    <li><a href="">习近平访美成果:美国宣布停止抵制亚投行</a></li>
+                    <li><a href="">曝陕西一局长办公室持枪杀人后自杀 疑因被举报</a></li>
+                </ul>
+            </div>
+            
+       </div>
+       <!--单块结束-->
+       
+       <!--单块开始-->
+        <div class="in3x h1">
+            <div class="in3d fl">
+                <img src="__PUBLIC__/images/xw.jpg" />
+                <ul class="in3dl">
+                    <li><a href="">河南工匠称月入1万多 李克强：待遇要提高</a></li>
+                    <li><a href="">习近平访美成果:美国宣布停止抵制亚投行</a></li>
+                    <li><a href="">曝陕西一局长办公室持枪杀人后自杀 疑因被举报</a></li>
+                </ul>
+            </div>
+       </div>
+       <!--单块结束-->
+       
+       <!--单块开始-->
+        <div class="in3x h2">
+            <div class="in3d fl">
+                <img src="__PUBLIC__/images/xw.jpg" />
+                <ul class="in3dl">
+                    <li><a href="">河南工匠称月入1万多 李克强：待遇要提高</a></li>
+                    <li><a href="">习近平访美成果:美国宣布停止抵制亚投行</a></li>
+                    <li><a href="">曝陕西一局长办公室持枪杀人后自杀 疑因被举报</a></li>
+                </ul>
+            </div>
+            
+            <div class="in3d fl">
+                <img src="__PUBLIC__/images/xw.jpg" />
+                <ul class="in3dl">
+                    <li><a href="">河南工匠称月入1万多 李克强：待遇要提高</a></li>
+                    <li><a href="">习近平访美成果:美国宣布停止抵制亚投行</a></li>
+                    <li><a href="">曝陕西一局长办公室持枪杀人后自杀 疑因被举报</a></li>
+                </ul>
+            </div>
+            
+       </div>
+       <!--单块结束-->
+</block>
+
+

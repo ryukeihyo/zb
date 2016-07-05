@@ -1,0 +1,197 @@
+<?php
+// +----------------------------------------------------------------------
+// | CoreThink [ Simple Efficient Excellent ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2014 http://www.corethink.cn All rights reserved.
+// +----------------------------------------------------------------------
+// | Author: liujb
+// +----------------------------------------------------------------------
+namespace Admin\Controller;
+use Think\Controller;
+/**
+ * 会员数量控制器
+ * @author liujb
+ */
+class MembersNumberController extends AdminController
+{
+    /**
+     * 会员数量
+     * author liujb
+     *
+     */
+    public function index(){
+        //$this->statisticsList();
+       // $this->searchViewdetails('business','41623','1');
+        if($_POST['ajax']) {
+            $operation_type = $_POST['operation_type'];
+            $area_type = $_POST['area_type'];
+            $area_id = $_POST['area_id'];
+            $p = $_GET['p']?$_GET['p']:1;
+            switch($operation_type){
+                case 'statistical':
+                    $this->statisticsList();
+                    break;
+                case 'view_details':
+                    $this->searchViewdetails($area_type,$area_id,$p);
+                    break;
+            }
+        }else {
+            $this->display('');
+        }
+    }
+
+    /**
+     * 统计列表数量
+     * author Fox
+     */
+    public  function  statisticsList(){
+        $statistics_list = array();
+         //分公司数量
+        $map_f['parentid'] = '0';
+        $fen_gong_si = D('User')->where($map_f)->select();
+       // echo  D('User')->where($map_f)->getLastSql();
+        $fen_gong_si_id = array();
+        foreach($fen_gong_si as $f){
+            $fen_gong_si_id[]=$f['id'];
+        }
+        $statistics_list['fengongsi_count']= count($fen_gong_si);
+
+        //代理商数量
+        $fen_gong_si_id = implode(",",$fen_gong_si_id);
+
+        $map_d['parentid'] = array("in",$fen_gong_si_id);
+
+        $dai_li_shang =  D('User')->where($map_d)->select();
+      //  echo D('User')->where($map_d)->getLastSql();
+        $dai_li_shang_id = array();
+        foreach($dai_li_shang as $d){
+            $dai_li_shang_id[]=$d['id'];
+        }
+
+        $statistics_list['daili_count']= count($dai_li_shang);
+
+        //事业部数量
+        $dai_li_shang_id = implode(",",$dai_li_shang_id);
+
+        $map_s['parentid'] = array("in",$dai_li_shang_id);
+
+        $shi_ye_bu =  D('User')->where($map_s)->select();
+
+       // echo  D('User')->where($map_s)->getLastSql();
+
+        $shi_ye_bu_id = array();
+        foreach($shi_ye_bu as $s){
+            $shi_ye_bu_id[]=$s['id'];
+        }
+
+        $statistics_list['shiye_count']= count($shi_ye_bu);
+
+        //业务员数量
+        $shi_ye_bu_id = implode(",",$shi_ye_bu_id);
+
+        $map_y['parentid'] = array("in",$shi_ye_bu_id);
+
+        $ye_wu_yuan =  D('User')->where($map_y)->select();
+        //echo D('User')->where($map_y)->getLastSql();
+        $ye_wu_yuan_id = array();
+        foreach($ye_wu_yuan as $y){
+            $ye_wu_yuan_id[] = $y['id'];
+        }
+
+        $statistics_list['yewu_count']= count($ye_wu_yuan);
+
+        //商家数量
+        $ye_wu_yuan_id = implode(",",$ye_wu_yuan_id);
+
+        $map_sj['parentid'] = array("in",$ye_wu_yuan_id);
+
+        $shang_jia =  D('User')->where($map_sj)->select();
+       // echo D('User')->where($map_sj)->getLastSql();
+        $shang_jia_id = array();
+        foreach($shang_jia as $sj){
+            $shang_jia_id[] = $sj['id'];
+        }
+
+        $statistics_list['shangjia_count']= count($shang_jia);
+
+        //消费会员数量
+        $shang_jia_id = implode(",",$shang_jia_id);
+
+        $map_h['parentid'] = array("in",$shang_jia_id);
+
+        $hui_yuan =  D('User')->where($map_h)->select();
+       // echo D('User')->where($map_h)->getLastSql();
+        $hui_yuan_id = array();
+        foreach($hui_yuan as $h){
+            $hui_yuan_id[] = $h['id'];
+        }
+
+        $statistics_list['huiyuan_count']= count($hui_yuan_id);
+
+        echo $this->ajaxReturn($statistics_list,'JSON');
+        //var_dump($statistics_list);
+    }
+
+    /**
+     * 查看会员详细
+     * author liujb
+     */
+
+    public function  searchViewdetails($area_type,$area_id,$p){
+
+        //全国（分公司） 默认
+        $map['parentid'] = $area_id;
+        $data = D('User')->where($map)->page("$p,10")->select();
+
+        //分页处理
+        $data_count = D('User')->field('count(*) as cnt')->where($map)->select();
+
+        $count = $data_count[0]['cnt'];
+        $page = new \Common\Util\Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数
+        $page_show       = $page->show();// 分页显示输出
+        $huiyuan_exp =array();
+        foreach($data as $key=>$da){
+            if($area_type=='quan'){  //查询分公司
+                $huiyuan_exp[$key]['area_type']= 'province';
+            }
+            if($area_type=='province'){  //查询代理商
+                $huiyuan_exp[$key]['area_type']= 'city';
+            }
+            if($area_type=='city'){  //查询事业部
+                $huiyuan_exp[$key]['area_type']= 'county';
+            }
+            if($area_type=='county'){  //查询业务员
+                $huiyuan_exp[$key]['area_type']= 'salesman';
+            }
+            if($area_type=='salesman'){ //查看商家
+                $huiyuan_exp[$key]['area_type']= 'business';
+            }
+            if($area_type=='business'){ //查看消费会员
+                $huiyuan_exp[$key]['area_type']= 'consumer';
+            }
+
+            $huiyuan_exp[$key]['id'] = $da['id'];
+            if($area_type=='salesman') {
+                $huiyuan_exp[$key]['jigou_name'] = $da['platform'];
+            }else{
+                $huiyuan_exp[$key]['jigou_name'] =  $da['realname'];
+            }
+
+        }
+        $huiyuan_exp['page_show'] = $page_show;
+     //   var_dump($huiyuan_exp);
+         echo $this->ajaxReturn($data,'JSON');
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}

@@ -1,0 +1,116 @@
+<?php
+// +----------------------------------------------------------------------
+// | CoreThink [ Simple Efficient Excellent ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2014 http://www.corethink.cn All rights reserved.
+// +----------------------------------------------------------------------
+// | Author: jry <598821125@qq.com> <http://www.corethink.cn>
+// +----------------------------------------------------------------------
+namespace Home\Controller;
+use Think\Controller;
+/**
+ * 用户控制器
+ * @author jry <598821125@qq.com>
+ */
+class RechargeController extends HomeController{
+	
+	
+	protected function _initialize(){
+        parent::_initialize();
+        $this->is_login();
+    }
+	
+    /**
+     * 用户列表
+     * @author jry <598821125@qq.com>
+     */
+    public function index(){
+		$this->meta_title = '商家现金充值';
+		if($_GET){
+            //modify by liujb 20160606 start
+			$mobile=$_GET['mobile'];
+			$maps['mobile']=$mobile;
+            $maps['uid']    = $this->__USER__[uid];
+
+            $uinfo=D("Pre_deposit")->where($maps)->find();
+
+            if($uinfo == NULL){
+                $where['mobile']   = $mobile;
+              //  $where['usertype'] = 6;
+                $uinfo = D("User")->where($where)->find();
+            }
+
+            if($uinfo['yue'] == NULL){
+                $uinfo['yue'] = '0.00';
+            }
+			$this->assign('uinfo', $uinfo);
+            //modify by liujb 20160606  end
+		}
+
+
+		if($_POST){
+			
+			//充值帐户预存
+			
+			$yucun=intval($_POST['fee']);
+			
+			if(empty($yucun)|| $yucun < 0){
+				$this->error('请输入正确的金额！');
+				exit;
+			}
+
+            //modify by liujb 20160606 start
+			$id=intval($_POST['id']);
+			$maps['id']=$id;
+            $where['mobile'] =  $_POST['mobile'];
+            $where['uid']    =  $this->__USER__['uid'];
+            $res_pre = D('Pre_deposit')->where($where)->find();
+            //echo D('Pre_deposit')->getLastSql();
+            if($res_pre == NULL){
+                $res['yue'] = 0.00;
+            }
+            $res = D('Pre_deposit')->where($maps)->find();  //用户的预存
+            if($res == NULL){
+                $res['yue'] = 0.00;
+            }
+
+            $data['uid'] = $this->__USER__['uid'];
+            $data['money'] = $yucun;
+            $data['beizhu'] = $_POST['beizhu'];
+            $data['realname'] = $_POST['realname'];
+            $data['mobile'] = $_POST['mobile'];
+            $data['yue'] = $yucun + $res['yue'];
+            $data['addtime'] = time();
+            //预存表
+            if($res_pre == NULL){
+                D('Pre_deposit')->add($data);
+            }else{
+                D('Pre_deposit')->where($where)->save($data);
+            }
+            //预存记录表
+            D("Recharge")->add($data);
+
+
+            //modify by liujb 20160606 end
+			$this->success('充值成功！');
+
+			exit;
+		}
+		$map['uid']=$this->__USER__['uid'];
+		$list=D("Recharge")->where($map)->page(!empty($_GET["p"])?$_GET["p"]:1, 2)->order("id desc")->select();
+		$page = new \Common\Util\Page(D('Recharge')->where($map)->count(), 2);
+		
+		$this->assign('volist',$list);
+		$this->assign('empty','<tr><td colspan="8">暂无数据</td></tr>');
+        $this->assign('page', $page->show());
+		
+		//$this->assign('__CURRENT_CATEGORY__',0);
+        Cookie('__forward__', $_SERVER['REQUEST_URI']);
+        $this->display();
+
+    }
+	
+	 
+
+   
+}

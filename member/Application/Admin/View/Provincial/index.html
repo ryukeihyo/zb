@@ -1,0 +1,79 @@
+<extend name="_Layout/main"/>
+
+<block name="var">
+    "current_version": "{:C('CURRENT_VERSION')}",
+    "check_version_url": "{:U('Admin/SystemUpdate/checkVersion')}",
+    "index_url": "{:U('Index/index')}",
+    "user_reg_date": {:$user_reg_date},
+    "user_reg_count": {:$user_reg_count}
+</block>
+
+<block name="libs">
+    <script src="__PUBLIC__/libs/chart/1.x/Chart.min.js"></script>
+</block>
+
+<block name="container">
+    <div class="container">
+		<div class="chart">
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-6 col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="pull-right">
+                                
+                            </div>
+                            <i class="fa fa-area-chart"></i> 省市县代理机构
+                        </div>
+                        <div class="panel-body">
+                          
+						  <style>
+						  caption, th {
+								text-align: center;
+							}
+						  </style>
+						  <table class="table table-bordered table-responsive table-striped table-hover" width="100%" border="0" cellspacing="1" cellpadding="0" bgcolor="#CCCCCC">
+							  <tr>
+								<th width="10%" bgcolor="#FFFFFF" align="center">序号</th>
+								<th bgcolor="#FFFFFF" align="center">名称</th>
+								<th bgcolor="#FFFFFF" align="center">比例</th>
+								<th bgcolor="#FFFFFF" align="center">提成</th>
+								<th bgcolor="#FFFFFF" align="center">管理</th>
+							  </tr>
+							  <volist name="user_list" id="vo" >						  
+							  <tr>
+								<td bgcolor="#FFFFFF" align="center">{$vo.id}</td>
+								<td bgcolor="#FFFFFF">{$vo.realname}-{$vo.username}</td>
+								<td bgcolor="#FFFFFF" align="center">{:C('FENGONGSI_PES')}</td>
+								<td bgcolor="#FFFFFF" align="center">暂无</td>
+								<td bgcolor="#FFFFFF" align="center"><a href="{:U('Provincial/shi',array('user_id'=>$vo[id]))}" >查看代理商</a></td>
+							  </tr>
+								</volist>
+							</table>
+						  
+						  
+						  
+						  
+						  
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+	
+	
+        
+
+
+        
+
+
+        <div class="footer text-muted">
+            <span>版权所有 © 2014-<php>echo date("Y",time());</php></span>
+            <a href="{:C('WEBSITE_DOMAIN')}" class="text-muted" target="_blank">{:C('PRODUCT_NAME')} v{:C('CURRENT_VERSION')}</a>
+            <a href="{:C('WEBSITE_DOMAIN')}" class="text-muted" target="_blank">{:C('COMPANY_NAME')}</a> 
+            <a class="text-muted pull-right">项目开发团队：{:C('DEVELOP_TEAM')}</a>
+        </div>
+    </div>
+</block>

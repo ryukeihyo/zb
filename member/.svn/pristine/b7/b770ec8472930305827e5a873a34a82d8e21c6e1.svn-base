@@ -1,0 +1,53 @@
+<extend name="_Layout/main"/>
+
+<block name="style">
+    <style type="text/css">
+        /* 文章列表样式 */
+        .article-list .media {
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        .article-list .list-cover{
+            width: 180px;
+            height: 100px;
+        }
+        .article-list .list-title{
+            margin-top: 6px;
+        }
+        .article-list .list-abstract{
+            height: 42px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        @media (max-width: 768px) {
+            .article-list .list-title{
+                font-size: 14px;
+                margin: 0px;
+            }
+            .article-list .list-cover{
+                width: 90px;
+                height: 66px;
+            }
+            .article-list .list-info {
+                font-size: 10px;
+                margin-top: 3px !important;
+                margin-bottom: 2px !important;
+            }
+            .article-list .list-abstract{
+                height: 36px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</block>
+
+<block name="main">
+    <div class="nrcx">
+            	<div class="nrcx_top"><p>会员注册</p></div>
+                
+                <div class="zclb">
+					<div style="font-size:30px; text-align:center;line-height:60px">{$msg}</div>
+					<div style="font-size:14px; text-align:center;line-height:60px"><a href="{$forward}">返回</a></div>
+                </div>
+            </div>
+</block>

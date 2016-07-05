@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <block name="title"><title>{$meta_title}｜{:C('WEB_SITE_TITLE')}－{:C('WEB_SITE_SLOGAN')}</title></block>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="author" content="{:C('WEB_SITE_TITLE')}">
+    <meta name="keywords" content="{$meta_keywords}">
+    <meta name="description" content="{$meta_description}">
+    <meta name="generator" content="CoreThink">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="{:C('WEB_SITE_TITLE')}">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <link rel="shortcut icon" type="image/x-icon" href="__ROOT__/favicon.ico">
+    <link rel="apple-touch-icon" type="image/x-icon" href="__ROOT__/favicon.ico">
+  <style>
+  *{margin:0px;padding:0px;font-size:14px; font-family:"微软雅黑", Arial, Helvetica, sans-serif;}
+body{ _height:auto;height:auto; margin:0px auto; width:640px; overflow:hidden}
+button,submit{cursor:pointer;}
+.clear { display:block !important; clear:both; height:0px; line-height:0px; font-size:0 } 
+img{border:0;vertical-align:middle;}
+li{list-style-type:none;}
+ul{list-style:none;}
+a:link,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+.cl{ clear:both;}
+.fr{float:right}
+.fl{float:left}
+.mar{margin: 0px auto;}
+.all{ width:100%; min-height:100px; margin:0px auto; height:auto; _height:auto; overflow:hidden; zoom:1; background:#f1f1f1;}
+
+.in1{width:100%;  height:42px; background:#0fa7d9;}
+.in1_n{width:1200px; height:42px; margin:0px auto; }
+.in1_n ul li{ float:left; line-height:42px; padding:0px 20px; }
+.in1_n ul li a{ font-size:16px; color:#FFF;}
+
+
+.in2{width:100%;  height:81px; background:url(__PUBLIC__/images/t_bj.jpg);}
+.in2n{width:1200px; height:81px; margin:0px auto;}
+.in2n_z{width:260px; height:81px;}
+.in2n_y{width:881px; height:81px;}
+.in2n_y ul li{ background:url(__PUBLIC__/images/bj1.jpg); float:left; width:87px; height:71px; border-left:1px solid #00749f; text-align:center; line-height:30px; padding-top:10px;}
+.in2n_y ul li a{ font-size:14px; color:#FFF; }
+
+.nr{width:1200px; height:700px; margin:0px auto;}
+
+.nrl{width:260px; height:690px; background:url(__PUBLIC__/images/bj2.jpg); border:1px solid #07789f;}
+.nrl1{width:35px; height:685px;}
+.nrl1 ul li{ background:url(__PUBLIC__/images/a_bj.jpg) no-repeat;width:35px; height:113px; border:1px solid #02769d; border-left:none;writing-mode:tb-rl; text-align:center;}
+.nrl1 ul li a{ display:block; margin:0px auto; width:20px; height:80px; font-size:14px; color:#fff; margin-right:5px; letter-spacing:5px; border:none; margin-top:15px;}
+
+
+.nrl2{width:195px; height:375px;  margin-right:13px; }
+.nrl2 p{width:193px; height:39px; background:url(__PUBLIC__/images/a_bj1.jpg) no-repeat; border:1px solid #07789f; line-height:39px; margin-top:10px;}
+.nrl2 p a{ font-size:14px; color:#fff; margin-left:15px;}
+.nrl2 p img{ margin-left:25px;}
+
+.nrl2_1{width:193px; height:129px; border:1px solid #07789f; margin-top:10px; background:url(__PUBLIC__/images/a_bj2.jpg) no-repeat;}
+.nrl2_1 span input{ width:120px; height:20px; margin-top:15px; }
+.nrl2_1 span{ text-align:center;font-size:14px; color:#fff; margin-left:15px;}
+
+
+
+.nrc{width:730px; height:690px; margin-left:15px;}
+
+.nrcs{width:730px; height:40px; background:#FFF; border-bottom:1px solid #d1d1d1; margin-top:10px; line-height:40px;}
+.nrcs p{ font-size:12px; color:#3e3e3e; float:left; margin-left:5px;}
+.nrcs p a{font-size:12px; color:#3e3e3e;}
+.nrcs span{font-size:12px; color:#3e3e3e; float:right; margin-right:5px;}
+
+.nrcx{width:730px; height:625px; background:#FFF; border-top:4px solid #0fa7d9; margin-top:10px;}
+.nrcx_top{width:730px; height:39px; border-bottom:1px solid #e5e5e5;}
+.nrcx_top p{ font-size:16px; color:#464646; line-height:39px; margin-left:10px;}
+.nrcx_nav{width:730px; height:585px;  }
+.nrcx_nav img{ margin:10px 12px;}
+.nrcx_nav p{font-size:13px; color:#6f6f6f; line-height:30px; margin:0px 12px;}
+
+
+.nrr{width:175px; height:690px; background:url(__PUBLIC__/images/bj2.jpg); border:1px solid #07789f;}
+.nrr ul li{ text-align:center; margin-top:13px;}
+
+
+.in3{width:1200px; height:175px; background:#FFF; margin:0px auto; margin-top:10px; border-top:4px solid #0fa7d9;}
+.in3s{width:1200px; height:40px;}
+.in3s ul li{  float:left; color:#0fa7d9; font-size:14px; width:70px; line-height:40px; margin-left:10px;}
+.in3s ul li a{color:#0fa7d9; font-size:14px;}
+
+.in3x{width:1200px; height:110px; margin-top:10px;}
+.in3d{width:580px; height:110px;  margin-left:10px;}
+.in3dl{ float:right;}
+.in3dl li{width:375px; line-height:35px;}
+.in3dl li a{font-size:14px; color:#3e3e3e}
+
+.di{width:100%; height:40px; background:#0fa7d9; margin-top:15px;}
+.din{width:1200px; height:40px; margin:0px auto;}
+.din ul li{ float:left; margin-left:10px;}
+.din ul li a{font-size:14px; color:#fff; line-height:40px; }
+.din p{font-size:14px; color:#fff; line-height:40px; float:right;}
+.din p a{ margin-left:50px;font-size:14px; color:#fff;}
+
+
+
+/********************************系统开始*********************************/
+.xt{width:100%; height:566px;overflow:hidden;}
+.xt_n{width:640px; height:505px;  margin:0px auto; margin-top:40px; }
+.xt_n1{width:255px; height:605px; background:#FFF; border-radius:5px; box-shadow:0px 0px 10px #000; margin:3px;}
+
+.xt_n1 h2,.xt_n2s h2,.xt_n3 h2{width:224px; height:43px; text-align:center; line-height:43px; display:block; margin:0px auto;margin-top:30px;  font-size:25px; color:#FFF; font-weight:normal; }
+
+.xhy{width:215px; height:210px;  margin:0px auto; margin-top:50px;}
+.xhy td{ font-size:14px; color:#0080aa;}
+.xhy input{width:165px; height:28px; border:1px solid #e5e5e5; border-radius:3px;}
+.sub input{width:101px; height:30px; background:url(__PUBLIC__/images/xt2.jpg) no-repeat;color:#fff; font-size:12px; border:none;}
+.xt_n1x{width:200px; height:220px; border:1px solid #bcbcbc;border-radius:3px;  margin:0px auto;margin-top:20px; }
+.xt_n1x h5{text-align:center; font-size:16px; color:#000; margin-top:80px; font-weight:normal; line-height:30px;}
+
+
+.xt_n2{width:658px; height:610px; overflow:hidden; margin-left:10px; margin-bottom:13px;}
+.xt_n2s{width:650px; height:275px; background:#FFF;box-shadow:0px 0px 10px #000; margin:3px; border-radius:5px; overflow:hidden;}
+.cz{width:480px; height:115px; margin:0px auto; margin-top:50px;}
+.cz td{ font-size:14px; color:#0080aa; text-align:right;}
+.cz input{width:165px;height:28px; border:1px solid #e5e5e5; border-radius:3px;font-size:14px; color:#0080aa; }
+
+
+.xt_n2x{width:640px;}
+
+.cz1{width:480px; height:155px; margin:0px auto; margin-top:35px;}
+.cz1 td{font-size:14px; color:#0080aa;}
+.cz1 input{width:165px;height:28px; border:1px solid #e5e5e5; border-radius:3px;font-size:14px; color:#0080aa;}
+.cz2{width:380px; height:70px;  margin-top:25px; margin-left:5px}
+
+
+.xt_n3{width:100%; height:205px; background:#FFF; border:solid 1px #ccc; line-height:30px; color:#666; margin-left:auto; margin-right:auto;}
+.hyxx{width:215px; height:330px;  margin:0px auto; margin-top:50px;}
+.hyxx td{font-size:14px; color:#0080aa; text-align:right;}
+.hyxx input{width:140px; height:28px; border:1px solid #e5e5e5; border-radius:3px;}
+.xt_n3 p{ text-align:center; margin-top:30px;}
+
+
+
+  
+  
+  </style>
+
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="/dialog/easydialog.js"></script>
+	<link rel="stylesheet" href="/dialog/easydialog.css" />
+
+	<script>
+	$(function(){
+	
+
+	
+		$(".huan").eq(0).css("color","#0fa7d9");
+		$(".huan").eq(1).css("color","#585858");
+		$(".huan").eq(2).css("color","#585858");
+		$(".in3x").hide();
+		$(".in3x").eq(0).show();
+		$(".huan").mouseover(function(){
+					var val = $(this).attr('alt');//取里面的值
+			$(".in3x").hide();//框里的所有都隐藏
+			$(".h"+val).show();
+			
+			$(".huan").css("color","#585858");
+			$(".huan").css("background","none");
+			$(this).css("color","#585858");  
+			$(this).css("color","#0fa7d9");
+			 
+		});
+		
+		
+		$("input[name='fee']").keyup(function(){     
+			var tmptxt=$(this).val();     
+			//$(this).val(tmptxt.replace(/\D|^0/g,''));
+			
+			$("input[name='jifen']").val($(this).val()*$("input[name='rate']").val()/100);			
+		}).bind("paste",function(){     
+			var tmptxt=$(this).val();     
+			//$(this).val(tmptxt.replace(/\D|^0/g,''));     
+		}).css("ime-mode", "disabled");
+		
+		//积分同步计算
+		$("")
+		
+		
+		
+		
+		
+	});
+	</script>
+    <block name="style"></block>
+
+    <!-- 如果配置里CDN静态资源列表则使用CDN否则使用静态资源 -->
+    <?php if(C('CDN_RESOURCE_LIST')): ?>
+        {:C('CDN_RESOURCE_LIST')}
+    <?php else: ?>
+        <script type="text/javascript" src="__PUBLIC__/libs/jquery/1.x/jquery-1.11.3.min.js"></script>
+    <?php endif; ?>
+
+    <block name="libs"></block>
+    {:C('WEB_SITE_STATISTICS')} <!-- 站点统计代码 -->
+</head>
+
+<body>
+<div class="xt">
+	<!--内容快开始-->
+	<div class="xt_n" style="margin-top:20px;">
+    
+   
+    <!--操作管理开始-->
+    <div class="xt_n2x" style=" position: relative">
+			<form method="post" method="">
+			<input type="hidden" name="act" value="search" />
+        	<table class="cz1" cellpadding="0" cellspacing="0">
+            	<tr>
+                	<td style="width:70px;">卡号/手机</td>
+                    <td style=" position:relative;"><input type="text" maxlength="11" name="username" value="<if condition="$username eq '' ">{$tel}
+    <else />{$username}</if>" id="username" onkeyup="this.value=this.value.replace(/\D/g,'')" />
+		 	
+					<input type="image" src="__PUBLIC__/images/search.jpg" style="width:30px; height:25px; border:none; position:absolute;left:130px;;top:7px;"/>
+					
+					</td>
+                    <td class="sub"><!--<input type="submit" value="查询" style="width:101px; height:30px; float:right; font-size:16px; color:#fff;"/>--></td>
+                </tr>
+                
+                <tr>
+                	<td>消费金额</td>
+                    <td><input type="text" name="fee" id="inputfee"  /></td>
+                    <td></td>
+                </tr>
+                
+                <tr>
+                	<td>赠送积分</td>
+                    <td><input type="text" name="jifen"  readonly /></td>
+                    <td></td>
+                </tr>
+                
+                <tr>
+                	<td>操作工号</td>
+                    <td><input type="text" /></td>
+                    <td></td>
+                </tr>
+            </table>
+            </form>
+            <table class="cz2" cellpadding="0" cellspacing="0" style="margin-top:0px;">
+            	<tr>
+                	<td class="sub"><input type="button" value="现金支付" id="xianjin" /></td>
+                    <td class="sub"><input type="button" value="预存支付"  onclick="$('#yczf').show()"  /></td><!--id="yucun_app"-->
+                    <td class="sub"><input type="button" value="泽百支付"  onclick="$('#zbzf').show()" /></td><!--id="zebaib_app"--> 
+                </tr>
+               
+                
+            </table>
+			<style>
+			.winbox{width:200px;height:50px; border:solid 1px #ccc;padding:10px; z-index:10; position:absolute; text-align:center; background:#fff;top:120px;left:100px;}
+			.winbox p { text-align:right;}
+			</style>
+			<div id="yczf" class="winbox" style="display:none"><p onclick="$('#yczf').hide()">关闭</p><a href="javascript:;" id="yucun">PC支付</a> 　|　<a href="javascript:;" id="yucun_app">APP支付</a></div>
+			<div id="zbzf" class="winbox" style="display:none"><p onclick="$('#zbzf').hide()">关闭</p> 　　<a href="javascript:;" id="zebaib">PC支付</a> 　|　<a href="javascript:;" id="zebaib_app">APP支付</a></div>
+
+			
+        
+        </div>
+    <!--操作管理结束-->
+    
+    <!--会员信息开始-->
+    <div class="xt_n3" style="border:none;background:none">
+	
+		<div id="tablist">
+    	<h3 style="float:left; width:80px; text-align:center" class="av" rel="tab1">会员信息</h3> <h3 style="float:left; width:80px;text-align:center" rel="tab2">商家信息</h3><h3 style="float:left; width:80px;text-align:center" rel="tab3">会员注册</h3><h3 style="float:left; width:80px;text-align:center"  id="bangka">绑卡</h3>
+    	</div>
+		<style>
+		.av{color:red}
+		</style>
+		<script>
+		$(function(){
+		
+			$("#tablist h3").click(function(){
+			
+				$("#tablist h3").removeClass("av");
+				$(this).addClass("av");
+				$("#tab1,#tab2,#tab3,#tab4").hide();
+				$("#"+$(this).attr("rel")).show();
+			
+			})
+			
+		
+		
+		})
+		</script>
+		
+		<div style="clear:both; border-top:solid 1px #ccc; margin-bottom:20px"></div>
+		
+        <table  cellpadding="0" cellspacing="0" style=" width:60%;margin-left:5%" align="centers" id="tab1">
+        	<tr>
+            	<td>会员姓名：</td>
+                <td><input type="text" id="realname_r" value="{$res.realname}" style="width:120px"/></td>
+            </tr>
+    
+            <tr>
+            	<td>泽百币余额：</td>
+                <td><input type="text"  value="{$res.zebaib}" style="width:120px"/></td>
+            </tr>
+            
+            <tr>
+            	<td>预存金额：</td>
+                <td><input type="text" value="{$res.yucun}" style="width:120px"/></td>
+            </tr>
+
+           
+        </table>
+		
+		
+		
+		
+		
+		
+		<div style="clear:both"></div>
+		
+        <table  cellpadding="0" cellspacing="0" style=" width:60%;margin-left:5%; display:none" align="centers" id="tab2">
+        	<tr>
+            	<td>商家积分：</td>
+                <td><input type="text" id="realname_r" value="{$info.score}" style="width:120px"/></td>
+            </tr>
+    
+            <tr>
+            	<td>商家泽百币：</td>
+                <td><input type="text"  value="{$info.zebaib}" style="width:120px"/></td>
+            </tr>
+            
+            <tr>
+            	<td>时       间：</td>
+                <td><input type="text" value="{$nowtime|date="Y-m-d H:i",###}" style="width:120px"/></td>
+            </tr>
+            <tr>
+            	<td>重置比例：</td>
+                <td><input type="text"  name="rate" value="{$info.rate}" style="width:120px"/>%</td>
+            </tr>
+
+           
+        </table>
+		
+		
+		
+    	
+		
+        
+		
+		<div style="clear:both"></div>
+		
+        <table  cellpadding="0" cellspacing="0" style=" width:60%;margin-left:5%; display:none" align="centers" id="tab3">
+        	<tr>
+            	<td>卡号：</td>
+                <td><input type="text" id="usernamereg" name="username" style="width:120px"/></td>
+            </tr>
+    
+            <tr>
+            	<td>姓名：</td>
+                <td><input type="text"  name="realname"  id="realname" style="width:120px"/></td>
+            </tr>
+            
+            <tr>
+            	<td>手机：</td>
+                <td><input type="text" name="mobile"  id="mobile" style="width:120px"/></td>
+            </tr>
+
+            <tr>
+            	<td>商家：</td>
+                <td><input type="text" name="managenumber" id="managenumber" readonly value="{$info.username}" style="width:120px"/></td>
+            </tr>
+
+            <tr>
+            	<td></td>
+                <td><input type="button" id="reg" value="注册" /></td>
+            </tr>
+
+           
+        </table>
+        
+         <script>
+		 $(function(){
+		 
+		 
+		 //bangka
+	
+	$("#bangka").click(function(){
+		
+		var btnFn = function(){
+		  if($("#bmobile").val()==''){
+				alert("手机号不能为空");
+				return false;
+		  }
+		  if($("#kahao").val()==''){
+				alert("卡号不能为空");
+				return false;
+		  }
+		  
+		  $.post("{:U('Home/System/bangka')}", { bmobile: $("#bmobile").val(), kahao: $("#kahao").val() },
+		   function(data){
+			
+			  var status=data;
+			  if(status>0){
+				alert("绑卡成功");
+					return true;
+			  }else if(status==-1){
+				alert("无用户数据");
+				return false;
+			  }else if(status==-2){
+				alert("已经邦定卡号了");
+				return false;
+			  }else{
+				alert("邦定失败");
+				return false;
+			  }
+			 
+			 
+		  });
+		 
+
+
+
+		};
+
+		easyDialog.open({
+		  container : {
+			header : '绑卡',
+			content : '<div align="center">手机号：<input type="text" name="bmobile" id="bmobile" /><br/>卡　号：<input type="text" name="kahao" id="kahao" /><br/></div>',
+			yesFn : btnFn,
+			noFn : true
+		  }
+		});
+		
+		/*
+		if($("#username").val()==''){
+			alert("手机号");
+			return false;
+		}
+		*/
+	
+	
+	})
+		 
+			$("#reg").click(function(){
+			
+
+			
+			
+				checkForm();
+			
+				
+			
+			
+			})
+		 
+		 
+
+		 
+		 
+		 
+		 })
+		 
+		 
+		 
+		 function checkForm(){
+		 
+			if($("#usernamereg").val()==''){
+			
+				alert("卡号不能为空");
+				return false;
+			}
+
+			if($("#usernamereg").val().length<9){
+			
+				alert("卡号必须是9位数字");
+				return false;
+			}
+			
+			if($("#realname").val()==''){
+			
+				alert("姓名不能为空");
+				return false;
+			}
+			if($("#mobile").val()==''){
+			
+				alert("手机不能为空");
+				return false;
+			}
+
+			
+			var tel = $("#mobile").val();
+			 var reg = /^0?1[3|4|6|7|5|8][0-9]\d{8}$/;
+			 if (reg.test(tel)) {
+				 // alert("号码正确~");
+			 }else{
+				  alert("手机号码有误~");
+				  return false;
+			 };
+					
+
+
+			$.post("{:U('Home/System/regmember2')}", { username: $("#usernamereg").val(), realname: $("#realname").val(), mobile: $("#mobile").val(), managenumber: $("#managenumber").val(),ajax:1 },function(data){
+				if(data==1){
+				
+					alert("注册成功!");
+					window.location.reload();
+				}else{
+				
+					alert(data);
+				
+				}
+		    });
+
+					
+			
+		 
+		 }
+		 
+		 </script>
+    </div>
+    <!--会员信息结束-->
+    
+
+    </div>
+	<!--内容快结束-->
+</div>
+<script>
+$(function(){
+
+
+	$("#inputfee").on('keydown',function(){
+	
+	
+		if($("#realname_r").val()==''){
+			alert("请点击查询后再输入消费金额");
+			$(this).val("");
+			return false;
+		}
+	
+	
+	
+	})
+
+
+
+	//现金支付
+	$("#xianjin").click(function(){
+		if($("#username").val()==''){
+			alert("请输入卡号/手机号");
+			return false;
+		}
+		$.post("{:U('Home/System/wap')}", { ajax: 1, paymethod: "xianjin",jifen:$("input[name='jifen']").val(),stel:"{$info.mobile}",fee:$("input[name='fee']").val(),username:$("#username").val() },
+	   function(data){
+		 if(data>0){
+			alert('操作成功！');
+			window.location.reload();
+			//window.location.href="{:U('Home/System/index')}";
+		 }else if(data==-2){
+			alert('积分不足，请充值！');
+			//window.location.href="{:U('Home/Finance/index')}";
+		 }
+	   });
+	
+	} )
+	
+	//预存支付
+	$("#yucun").click(function(){
+	
+		$.post("{:U('Home/System/wap')}", { ajax: 1, paymethod: "yucun",jifen:$("input[name='jifen']").val(),stel:"{$info.mobile}",fee:$("input[name='fee']").val(),username:$("#username").val() },
+	   function(data){
+		  if(data>0){
+			alert('操作成功！');
+			window.location.reload();
+		 }else if(data==-1){
+			alert('预存金额不足!');
+		 }
+	   });
+	
+	} )
+	
+	//泽百支付
+	$("#zebaib").click(function(){
+	
+		$.post("{:U('Home/System/wap')}", { ajax: 1, paymethod: "zebaib",jifen:$("input[name='jifen']").val(),stel:"{$info.mobile}",fee:$("input[name='fee']").val(),username:$("#username").val() },
+	   function(data){
+		
+		 if(data>0){
+			alert('操作成功！');
+			window.location.reload();
+		 }else if(data==-1){
+			alert('泽百币不足!');
+		 }
+		
+	   });
+	
+	} )
+	
+	
+	
+	//预存支付APP
+	$("#yucun_app").click(function(){
+	
+		$.post("{:U('Home/System/wap')}", { ajax: 1, paymethod: "yucun",jifen:$("input[name='jifen']").val(),stel:"{$info.mobile}",fee:$("input[name='fee']").val(),username:$("#username").val(),app:1 },
+	   function(data){
+		  if(data>0){
+			alert('操作成功！');
+		 }else if(data==-2){
+			alert('已经提交，请等待客户确认!');
+		 }
+	   });
+	
+	} )
+	
+	//泽百支付APP
+	$("#zebaib_app").click(function(){
+	
+		$.post("{:U('Home/System/wap')}", { ajax: 1, paymethod: "zebaib",jifen:$("input[name='jifen']").val(),stel:"{$info.mobile}",fee:$("input[name='fee']").val(),username:$("#username").val(),app:1 },
+	   function(data){
+		
+		 if(data>0){
+			alert('操作成功！');
+		 }else if(data==-1){
+			alert('泽百币不足!');
+		 }
+		
+	   });
+	
+	} )
+	
+	
+	//监控
+	
+	
+	
+	
+	
+	var t=setInterval(function(){
+	
+	
+	
+	
+	if($("#username").val()!=''){
+	
+		$.getJSON("{:U('Home/Interface/process')}",{mobile:$("#username").val()},function(json){
+			 
+		
+		
+			if(json.status==0&&json.process_scuess!=1){
+			
+				$.getJSON("{:U('Home/Interface/process_scuess')}",{mobile:$("#username").val()});
+			
+				alert("会员【"+json.mobile+"】已经完成支付！");
+				window.location.reload();
+				
+			}else if(json.status==2&&json.process_scuess!=1){
+				$.getJSON("{:U('Home/Interface/process_scuess')}",{mobile:$("#username").val()});
+				alert("会员【"+json.mobile+"】已经取消支付！");
+				window.location.reload();
+				
+			}
+	
+	
+	
+		})
+	
+	}
+
+	},3000);
+	
+	
+	
+	
+	
+
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<extend name="_Layout/main_ledger"/>
+
+<block name="style">
+    <link rel="stylesheet" href="__PUBLIC__/css/ledger.css">
+</block>
+<block name="libs">
+    <script src="__PUBLIC__/libs/chart/1.x/Chart.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/libs/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/ledger.js"></script>
+</block>
+
+<block name="container">
+
+    <div id="ledger_box">
+
+        <p id="search_info"></p>
+        <p id="know_info"></p>
+        <div id="son_branch_total" class="ledger_table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>数量</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="province_membership">
+                        <td>分公司</td>
+                        <td></td>
+                        <td><a href="#">查看</a></td>
+                    </tr>
+                    <tr id="city_membership">
+                        <td>代理商</td>
+                        <td></td>
+                        <td><a href="#">查看</a></td>
+                    </tr>
+                    <tr id="county_membership">
+                        <td>事业部</td>
+                        <td></td>
+                        <td><a href="#">查看</a></td>
+                    </tr>
+                    <tr id="salesman_membership">
+                        <td>业务员</td>
+                        <td></td>
+                        <td><a href="#">查看</a></td>
+                    </tr>
+                    <tr id="business_membership">
+                        <td>商家</td>
+                        <td></td>
+                        <td><a href="#">查看</a></td>
+                    </tr>
+                    <tr id="consumer_membership">
+                        <td>消费会员</td>
+                        <td></td>
+                        <td><a href="#">查看</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div id="son_branch_list" class="ledger_panes">
+            <table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>名称</th>
+                        <th>管理</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="page_list_box">
+            <ul>
+                <li class="active current"><a id="call_ajax_url" href="{:U('Admin/membersNumber/index')}">1</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="pop_box">
+        <div class="pop_box_close_button">X</div>
+        数据加载中，请稍候……
+    </div>
+</block>    

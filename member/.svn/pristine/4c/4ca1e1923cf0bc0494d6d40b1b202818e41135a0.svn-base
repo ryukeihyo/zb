@@ -1,0 +1,110 @@
+<?php
+
+namespace Home\Controller;
+use Think\Controller;
+use Think\Model;
+
+class CashierSystemInterfaceController extends HomeController {
+
+
+    public  function  index(){
+
+        $post_data = file_get_contents('php://input', 'r');
+        $re_data = json_decode($post_data);
+        $model = new Model();
+       // $test= $model->db(1,"sqlsrv://wdsa:weida888@182.92.97.83:1433/wd")->query("select count(*) as cnt  from t_listRule");
+       // echo $test;
+       // var_dump($test);
+      //  exit;
+        $result = false ;
+        if($re_data->oper_type =='insertlog'){
+            $result = $this->insertlog($re_data);
+        }else if ($re_data->paytype =='insertuser'){
+
+        }else{
+          // $this->test();
+        }
+        echo $result;
+    }
+
+    /**
+     * 插入消费记录
+     * @param $re_data  json数据
+     * author liujb
+     */
+    public  function insertlog($re_data){
+        $map['username'] = '000051828';
+        //查询会员信息
+        $res = D("User")->where($map)->find();
+      //  echo D("User")->where($map)->getLastSql();exit;
+        //查询商家信息
+        $map_bus['id'] = $re_data->branchid;
+        $res_bus = D('User')->where($map_bus)->find();
+
+        $paytype = $re_data->paytype;
+        $pay_data = explode(';', $paytype);
+
+        $pay_money = array();
+        $pay_cnt = count($pay_data);
+        for ($i = 0; $i<$pay_cnt; $i++) {
+            $pay_t = $pay_data[$i];
+            $pay = explode('-', $pay_t);
+            if ($pay[0] == '现金' ||$pay[0] == '银联')
+            {
+                $pay_money[1] += $pay_data[1]+$pay[1];
+                $pay_type[1] = 1;
+            }
+
+            if ($pay[0] == '积分') {
+                $pay_money[3] += $pay[1];
+                $pay_type[3] = 3;
+            }
+            if ($pay[0] == '预存') {
+                $pay_money[2] += $pay[1];
+                $pay_type[2] = 2;
+            }
+        }
+
+        $money_cnt = count($pay_money);
+
+        for ($j = 1; $j <= $money_cnt; $j++) {
+            $jifen=0;
+            if($pay_type[$j] == '1' && $pay_money[$j] > 0){ //现金记录
+                $map_user['money'] = $pay_money[$j];
+                $map_user['typeid'] = 1;
+                $jifen = $pay_money[$j] * $res_bus['rate'] / 100; //赠送泽百币
+
+                //用户增加泽百币
+                $res_user['zebaib']= $res['zebaib']+$jifen;
+                $res_user['id']    = $res['id'];
+                $r=D("User")->save($res_user);
+            }
+
+            if($pay_type[$j] == '2' && $pay_money[$j] > 0){ //预存记录
+                $map_user['money'] = $pay_money[$j];
+                $map_user['typeid'] = 2;
+            }
+
+            if($pay_type[$j] == '3' && $pay_money[$j] > 0){ //泽百币记录
+                $map_user['money'] = $pay_money[$j];
+                $map_user['typeid'] = 3;
+            }
+
+            $map_user['uid']     = $res['id'];
+            $map_user['addtime'] = time();
+            $map_user['jifen']   = $jifen;
+            $map_user['guanlifei'] = $res_bus['guanlifei'];
+            $map_user['parentid']  = $res['parentid'];
+            $map_user['payuid']    = $res_bus['id'];
+            $code = D("Log")->add($map_user); //插入消费记录
+        }
+        if($code){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
+
+    }
+
+
+}

@@ -1,0 +1,131 @@
+<extend name="_Layout/main"/>
+
+<block name="style">
+    <style type="text/css">
+        /* 文章列表样式 */
+        .article-list .media {
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        .article-list .list-cover{
+            width: 180px;
+            height: 100px;
+        }
+        .article-list .list-title{
+            margin-top: 6px;
+        }
+        .article-list .list-abstract{
+            height: 42px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        @media (max-width: 768px) {
+            .article-list .list-title{
+                font-size: 14px;
+                margin: 0px;
+            }
+            .article-list .list-cover{
+                width: 90px;
+                height: 66px;
+            }
+            .article-list .list-info {
+                font-size: 10px;
+                margin-top: 3px !important;
+                margin-bottom: 2px !important;
+            }
+            .article-list .list-abstract{
+                height: 36px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</block>
+
+<block name="main">
+<!--员工信息开始-->
+            <div class="nrcx">
+            	<div class="nrcx_top"><p>商家现金充值</p></div>
+                
+                <div class="zclb">
+                	<table cellpadding="0" cellspacing="0" class="sjjf">
+						<form action="" method="get">
+                    	<tr>
+                        	<td>会员手机</td>
+                            <td><input type="text" name="mobile" value="{$uinfo.mobile}" /></td>
+                            <td colspan="2"><input type="submit" value="查询" style="width:101px; height:28px; background:url(__PUBLIC__/images/dc.jpg) no-repeat; border:none; font-size:16px; color:#000;" /></td>
+                        </tr>
+                        </form>
+						<form action="" method="post">
+						<input type="hidden" name="id" value="{$uinfo.id}" />
+						<input type="hidden" name="mobile" value="{$uinfo.mobile}" />
+						<input type="hidden" name="yue" value="{$uinfo.yucun}" />
+                        <tr>
+                        	<td>会员姓名</td>
+                            <td><input type="text" name="realname" readonly value="{$uinfo.realname}" /></td>
+                            <td>&nbsp;&nbsp;</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td>预存余额</td>
+                            <td><input type="text" readonly value="{$uinfo.yue}" /></td><!-- modify by liujb 20160607 -->
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        
+                        <tr>
+                        	<td >充值金额</td>
+                            <td><input type="text" name="fee" /></td>
+                            <td width="100">&nbsp;&nbsp;</td>
+                            <td width="250"></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td colspan="4">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注<input type="text" style="width:337px; height:75px;" name="beizhu" /></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td colspan="2" class="sub"><input type="submit" value="充值" style="width:101px; height:30px; margin-left:105px; float:left; font-size:16px; color:#fff;" /> <input type="reset" value="重填" style="width:101px; height:30px; float:left; font-size:16px; color:#fff; margin-left:15px;" /></td>
+                            <td colspan="2" class="sub" align="left"></td>
+                        </tr>
+						</form>
+                    </table>
+                    
+                    <table cellpadding="0" cellspacing="0" class="zclb1" style=" margin-top:20px;">
+                        <tr>
+                        	<td colspan="6" class="pt1">
+                            手机号码<input type="text" style="width:185px;" /><input type="submit" value="查询" style="width:41px; height:27px; background:url(__PUBLIC__/images/cz.jpg) no-repeat; border:none;font-size:14px; color:#fff;"/>&nbsp;从<input type="text" class="" id="demo" name="starttime" style="width:90px;" />&nbsp;到<input type="text" name="endtime" class="" id="demo2" style="width:90px;"/><input type="submit" value="查询" style="width:41px; height:27px; background:url(__PUBLIC__/images/cz.jpg) no-repeat; border:none;font-size:14px; color:#fff;"/><!--<input type="submit" value="导出表单" style="width:101px; height:28px; background:url(__PUBLIC__/images/dc.jpg) no-repeat; border:none;font-size:14px; color:#000;"/>-->
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <table cellpadding="0" cellspacing="0" class="biao1" style="border-collapse:collapse;">
+                    	<tr>
+                        	<th>序号</th>
+                            <th>会员姓名</th>
+                            <th>手机号码</th>
+                            <th>充值金额</th>
+                            <th>充值余额</th>
+                            <th>充值时间</th>
+                        </tr>
+                         <volist name="volist" id="vo" empty="$empty">
+                        <tr>
+                        	<td>{$i}</td>
+                            <td>{$vo.realname}</td>
+                            <td>{$vo.mobile}</td>
+                            <td>{$vo.money}</th>
+                            <td>{$vo.yue}</td>
+                            <td>{$vo.ctime|time_format='Y-m-d'}</td>
+                            
+                        </tr>
+                        </volist>
+                    </table>
+                    <div class="fy">
+                    	<p>{$page}</p>
+                    </div>
+                </div>
+            </div>
+            <!--员工信息开始-->
+
+
+</block>

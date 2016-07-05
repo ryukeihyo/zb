@@ -1,0 +1,609 @@
+[ 2016-06-16T09:21:39+08:00 ] ::1 /member/admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_module` [ RunTime:0.0050s ]
+SQL: SELECT `name` FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #2 is not an array D:\xampp\htdocs\member\Application\Common\Behavior\InitModuleBehavior.class.php 第 27 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_config` [ RunTime:0.0060s ]
+SQL: SELECT `value` FROM `zb_system_config` WHERE `name` = 'URL_MODEL' LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\InitModuleBehavior [ RunTime:1.076061s ]
+INFO: [ app_init ] --END-- [ RunTime:1.078061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SELECT `name`,`value`,`type` FROM `zb_system_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 2 for parse_attr(), called in D:\xampp\htdocs\member\Application\Common\Model\SystemConfigModel.class.php on line 52 and defined D:\xampp\htdocs\member\Application\Common\Common\function.php 第 17 行.
+NOTIC: [2] Missing argument 2 for parse_attr(), called in D:\xampp\htdocs\member\Application\Common\Model\SystemConfigModel.class.php on line 52 and defined D:\xampp\htdocs\member\Application\Common\Common\function.php 第 17 行.
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.013001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0070s ]
+
+[ 2016-06-16T09:21:40+08:00 ] ::1 /member/admin/public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_module` [ RunTime:0.0040s ]
+SQL: SELECT `name` FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #2 is not an array D:\xampp\htdocs\member\Application\Common\Behavior\InitModuleBehavior.class.php 第 27 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_config` [ RunTime:0.0040s ]
+SQL: SELECT `value` FROM `zb_system_config` WHERE `name` = 'URL_MODEL' LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\InitModuleBehavior [ RunTime:1.050060s ]
+INFO: [ app_init ] --END-- [ RunTime:1.053060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.010001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007001s ]
+
+[ 2016-06-16T09:21:41+08:00 ] ::1 /member/admin/public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_module` [ RunTime:0.0070s ]
+SQL: SELECT `name` FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #2 is not an array D:\xampp\htdocs\member\Application\Common\Behavior\InitModuleBehavior.class.php 第 27 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_config` [ RunTime:0.0080s ]
+SQL: SELECT `value` FROM `zb_system_config` WHERE `name` = 'URL_MODEL' LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\InitModuleBehavior [ RunTime:1.098063s ]
+INFO: [ app_init ] --END-- [ RunTime:1.100063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-06-16T09:54:04+08:00 ] ::1 /member/admin/public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_module` [ RunTime:0.0050s ]
+SQL: SELECT `name` FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #2 is not an array D:\xampp\htdocs\member\Application\Common\Behavior\InitModuleBehavior.class.php 第 27 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_config` [ RunTime:0.0060s ]
+SQL: SELECT `value` FROM `zb_system_config` WHERE `name` = 'URL_MODEL' LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\InitModuleBehavior [ RunTime:1.077061s ]
+INFO: [ app_init ] --END-- [ RunTime:1.079062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `zb_user` WHERE `group` >= 1 AND `username` = 'admin' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 2 for user_md5(), called in D:\xampp\htdocs\member\Application\Common\Model\UserModel.class.php on line 176 and defined D:\xampp\htdocs\member\Application\Common\Common\function.php 第 309 行.
+NOTIC: [8] Undefined variable: auth_key D:\xampp\htdocs\member\Application\Common\Common\function.php 第 310 行.
+SQL: UPDATE `zb_user` SET `login`=`login`+1,`last_login_time`='1466042043',`last_login_ip`='0' WHERE `id` = 38077 [ RunTime:0.0010s ]
+
+[ 2016-06-16T09:54:08+08:00 ] ::1 /member/admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_module` [ RunTime:0.0050s ]
+SQL: SELECT `name` FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #2 is not an array D:\xampp\htdocs\member\Application\Common\Behavior\InitModuleBehavior.class.php 第 27 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_config` [ RunTime:0.0050s ]
+SQL: SELECT `value` FROM `zb_system_config` WHERE `name` = 'URL_MODEL' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitModuleBehavior [ RunTime:1.070061s ]
+INFO: [ app_init ] --END-- [ RunTime:1.071061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.008000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `zb_user_group` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `zb_system_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1 AND `url` LIKE 'Admin/Index/index%' ORDER BY pid desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `group` FROM `zb_user` WHERE `id` = 38077 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: new_all_module_menu_list D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 63 行.
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1 AND `url` LIKE 'Admin/Index/index%' ORDER BY pid desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1  [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user` WHERE ( `ctime` >= 1464796800 AND `ctime` < 1464883200  ) LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user` WHERE ( `ctime` >= 1464883200 AND `ctime` < 1464969600  ) LIMIT 1   [ RunTime:0.0250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user` WHERE ( `ctime` >= 1464969600 AND `ctime` < 1465056000  ) LIMIT 1   [ RunTime:0.0260s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user` WHERE ( `ctime` >= 1465056000 AND `ctime` < 1465142400  ) LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user` WHERE ( `ctime` >= 1465142400 AND `ctime` < 1465228800  ) LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user` WHERE ( `ctime` >= 1465228800 AND `ctime` < 1465315200  ) LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user` WHERE ( `ctime` >= 1465315200 AND `ctime` < 1465401600  ) LIMIT 1   [ RunTime:0.0250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user` WHERE ( `ctime` >= 1465401600 AND `ctime` < 1465488000  ) LIMIT 1   [ RunTime:0.0260s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user` WHERE ( `ctime` >= 1465488000 AND `ctime` < 1465574400  ) LIMIT 1   [ RunTime:0.0250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user` WHERE ( `ctime` >= 1465574400 AND `ctime` < 1465660800  ) LIMIT 1   [ RunTime:0.0250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user` WHERE ( `ctime` >= 1465660800 AND `ctime` < 1465747200  ) LIMIT 1   [ RunTime:0.0260s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user` WHERE ( `ctime` >= 1465747200 AND `ctime` < 1465833600  ) LIMIT 1   [ RunTime:0.0250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user` WHERE ( `ctime` >= 1465833600 AND `ctime` < 1465920000  ) LIMIT 1   [ RunTime:0.0270s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user` WHERE ( `ctime` >= 1465920000 AND `ctime` < 1466006400  ) LIMIT 1   [ RunTime:0.0240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user` WHERE ( `ctime` >= 1466006400 AND `ctime` < 1466092800  ) LIMIT 1   [ RunTime:0.0240s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined variable: meta_keywords D:\xampp\htdocs\member\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 9 行.
+NOTIC: [8] Undefined variable: meta_description D:\xampp\htdocs\member\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 10 行.
+NOTIC: [2] Missing argument 2 for get_cover(), called in D:\xampp\htdocs\member\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php on line 46 and defined D:\xampp\htdocs\member\Application\Common\Common\function.php 第 346 行.
+SQL: SHOW COLUMNS FROM `zb_public_upload` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `zb_public_upload` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: select version() as v; [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.122007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.123007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009000s ]
+
+[ 2016-06-16T09:54:09+08:00 ] ::1 /member/admin/system_update/checkversion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_module` [ RunTime:0.0050s ]
+SQL: SELECT `name` FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #2 is not an array D:\xampp\htdocs\member\Application\Common\Behavior\InitModuleBehavior.class.php 第 27 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_config` [ RunTime:0.0050s ]
+SQL: SELECT `value` FROM `zb_system_config` WHERE `name` = 'URL_MODEL' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitModuleBehavior [ RunTime:1.069061s ]
+INFO: [ app_init ] --END-- [ RunTime:1.072061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004001s ]
+
+[ 2016-06-16T09:54:13+08:00 ] ::1 /member/admin/provincial/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_module` [ RunTime:0.0070s ]
+SQL: SELECT `name` FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #2 is not an array D:\xampp\htdocs\member\Application\Common\Behavior\InitModuleBehavior.class.php 第 27 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_config` [ RunTime:0.0060s ]
+SQL: SELECT `value` FROM `zb_system_config` WHERE `name` = 'URL_MODEL' LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\InitModuleBehavior [ RunTime:1.059061s ]
+INFO: [ app_init ] --END-- [ RunTime:1.062061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.005001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `zb_user_group` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `zb_system_menu` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1 AND `url` LIKE 'Admin/Provincial/index%' ORDER BY pid desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `group` FROM `zb_user` WHERE `id` = 38077 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: new_all_module_menu_list D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 63 行.
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1 AND `url` LIKE 'Admin/Provincial/index%' ORDER BY pid desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_user` WHERE `usertype` = 0  [ RunTime:0.0660s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: meta_keywords D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 9 行.
+NOTIC: [8] Undefined variable: meta_description D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 10 行.
+NOTIC: [2] Missing argument 2 for get_cover(), called in D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php on line 46 and defined D:\xampp\htdocs\member\Application\Common\Common\function.php 第 346 行.
+SQL: SHOW COLUMNS FROM `zb_public_upload` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `zb_public_upload` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Undefined variable: user_reg_date D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 158 行.
+NOTIC: [8] Undefined variable: user_reg_count D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 159 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.192011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.193011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011000s ]
+
+[ 2016-06-16T09:54:48+08:00 ] ::1 /member/admin/provincial/shi/user_id/41484.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_module` [ RunTime:0.0070s ]
+SQL: SELECT `name` FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0000s ]
+NOTIC: [2] array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #2 is not an array D:\xampp\htdocs\member\Application\Common\Behavior\InitModuleBehavior.class.php 第 27 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_config` [ RunTime:0.0050s ]
+SQL: SELECT `value` FROM `zb_system_config` WHERE `name` = 'URL_MODEL' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitModuleBehavior [ RunTime:1.066061s ]
+INFO: [ app_init ] --END-- [ RunTime:1.068061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `zb_user_group` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `zb_system_menu` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1 AND `url` LIKE 'Admin/Provincial/shi%' ORDER BY pid desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `group` FROM `zb_user` WHERE `id` = 38077 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: new_all_module_menu_list D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 63 行.
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1 AND `url` LIKE 'Admin/Provincial/shi%' ORDER BY pid desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: side_menu_list D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 77 行.
+NOTIC: [8] Undefined variable: parent_menu D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 78 行.
+NOTIC: [8] Undefined variable: parent_menu_id D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 79 行.
+NOTIC: [8] Undefined variable: parent_menu D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 80 行.
+SQL: SELECT * FROM `zb_user` WHERE `usertype` = 0  [ RunTime:0.0690s ]
+SQL: SELECT * FROM `zb_user` WHERE `id` = 41484 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: meta_keywords D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 9 行.
+NOTIC: [8] Undefined variable: meta_description D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 10 行.
+NOTIC: [2] Missing argument 2 for get_cover(), called in D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php on line 46 and defined D:\xampp\htdocs\member\Application\Common\Common\function.php 第 346 行.
+SQL: SHOW COLUMNS FROM `zb_public_upload` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `zb_public_upload` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 117 行.
+NOTIC: [8] Undefined variable: user_reg_date D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 158 行.
+NOTIC: [8] Undefined variable: user_reg_count D:\xampp\htdocs\member\Runtime\Cache\Admin\8e99af80f6c078a084074f72e9be57cd.php 第 159 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.165009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.167010s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.015001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.019001s ]
+
+[ 2016-06-16T09:54:58+08:00 ] ::1 /member/admin/provincial/shiyebu/user_id/41485.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_module` [ RunTime:0.0060s ]
+SQL: SELECT `name` FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #2 is not an array D:\xampp\htdocs\member\Application\Common\Behavior\InitModuleBehavior.class.php 第 27 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_config` [ RunTime:0.0070s ]
+SQL: SELECT `value` FROM `zb_system_config` WHERE `name` = 'URL_MODEL' LIMIT 1   [ RunTime:0.0020s ]
+INFO: Run Common\Behavior\InitModuleBehavior [ RunTime:1.060061s ]
+INFO: [ app_init ] --END-- [ RunTime:1.065061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `zb_user_group` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `zb_system_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1 AND `url` LIKE 'Admin/Provincial/shiyebu%' ORDER BY pid desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `group` FROM `zb_user` WHERE `id` = 38077 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: new_all_module_menu_list D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 63 行.
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1 AND `url` LIKE 'Admin/Provincial/shiyebu%' ORDER BY pid desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: side_menu_list D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 77 行.
+NOTIC: [8] Undefined variable: parent_menu D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 78 行.
+NOTIC: [8] Undefined variable: parent_menu_id D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 79 行.
+NOTIC: [8] Undefined variable: parent_menu D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 80 行.
+SQL: SELECT * FROM `zb_user` WHERE `usertype` = 0  [ RunTime:0.1080s ]
+SQL: SELECT * FROM `zb_user` WHERE `id` = 41485 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: meta_keywords D:\xampp\htdocs\member\Runtime\Cache\Admin\23f4e6c114aa803bcea7f099f79d3a65.php 第 9 行.
+NOTIC: [8] Undefined variable: meta_description D:\xampp\htdocs\member\Runtime\Cache\Admin\23f4e6c114aa803bcea7f099f79d3a65.php 第 10 行.
+NOTIC: [2] Missing argument 2 for get_cover(), called in D:\xampp\htdocs\member\Runtime\Cache\Admin\23f4e6c114aa803bcea7f099f79d3a65.php on line 46 and defined D:\xampp\htdocs\member\Application\Common\Common\function.php 第 346 行.
+SQL: SHOW COLUMNS FROM `zb_public_upload` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `zb_public_upload` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\23f4e6c114aa803bcea7f099f79d3a65.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\23f4e6c114aa803bcea7f099f79d3a65.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\23f4e6c114aa803bcea7f099f79d3a65.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\23f4e6c114aa803bcea7f099f79d3a65.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\23f4e6c114aa803bcea7f099f79d3a65.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\23f4e6c114aa803bcea7f099f79d3a65.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\23f4e6c114aa803bcea7f099f79d3a65.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\23f4e6c114aa803bcea7f099f79d3a65.php 第 117 行.
+NOTIC: [8] Undefined variable: user_reg_date D:\xampp\htdocs\member\Runtime\Cache\Admin\23f4e6c114aa803bcea7f099f79d3a65.php 第 158 行.
+NOTIC: [8] Undefined variable: user_reg_count D:\xampp\htdocs\member\Runtime\Cache\Admin\23f4e6c114aa803bcea7f099f79d3a65.php 第 159 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.138008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.139008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2016-06-16T09:55:44+08:00 ] ::1 /member/admin/system_update/checkversion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_module` [ RunTime:0.0060s ]
+SQL: SELECT `name` FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #2 is not an array D:\xampp\htdocs\member\Application\Common\Behavior\InitModuleBehavior.class.php 第 27 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_config` [ RunTime:0.0050s ]
+SQL: SELECT `value` FROM `zb_system_config` WHERE `name` = 'URL_MODEL' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitModuleBehavior [ RunTime:1.058858s ]
+INFO: [ app_init ] --END-- [ RunTime:1.061858s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.007001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-06-16T09:55:47+08:00 ] ::1 /member/admin/provincial/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_module` [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #2 is not an array D:\xampp\htdocs\member\Application\Common\Behavior\InitModuleBehavior.class.php 第 27 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_config` [ RunTime:0.0080s ]
+SQL: SELECT `value` FROM `zb_system_config` WHERE `name` = 'URL_MODEL' LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\InitModuleBehavior [ RunTime:1.072062s ]
+INFO: [ app_init ] --END-- [ RunTime:1.074062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `zb_user_group` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `zb_system_menu` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1 AND `url` LIKE 'Admin/Provincial/index%' ORDER BY pid desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `group` FROM `zb_user` WHERE `id` = 38077 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: new_all_module_menu_list D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 63 行.
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1 AND `url` LIKE 'Admin/Provincial/index%' ORDER BY pid desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_user` WHERE `usertype` = 0  [ RunTime:0.0670s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: meta_keywords D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 9 行.
+NOTIC: [8] Undefined variable: meta_description D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 10 行.
+NOTIC: [2] Missing argument 2 for get_cover(), called in D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php on line 46 and defined D:\xampp\htdocs\member\Application\Common\Common\function.php 第 346 行.
+SQL: SHOW COLUMNS FROM `zb_public_upload` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `zb_public_upload` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 117 行.
+NOTIC: [8] Undefined variable: user_reg_date D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 158 行.
+NOTIC: [8] Undefined variable: user_reg_count D:\xampp\htdocs\member\Runtime\Cache\Admin\4cc69ff1b094f7350041d9317f9248d6.php 第 159 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.190011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.192011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009001s ]
+
+[ 2016-06-16T10:00:16+08:00 ] ::1 /member/admin/consumptionRecord/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_module` [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0000s ]
+NOTIC: [2] array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #2 is not an array D:\xampp\htdocs\member\Application\Common\Behavior\InitModuleBehavior.class.php 第 27 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_config` [ RunTime:0.0156s ]
+SQL: SELECT `value` FROM `zb_system_config` WHERE `name` = 'URL_MODEL' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitModuleBehavior [ RunTime:1.131215s ]
+INFO: [ app_init ] --END-- [ RunTime:1.132215s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `zb_user_group` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `zb_system_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1 AND `url` LIKE 'Admin/ConsumptionRecord/index%' ORDER BY pid desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `group` FROM `zb_user` WHERE `id` = 38077 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: new_all_module_menu_list D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 63 行.
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1 AND `url` LIKE 'Admin/ConsumptionRecord/index%' ORDER BY pid desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: side_menu_list D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 77 行.
+NOTIC: [8] Undefined variable: parent_menu D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 78 行.
+NOTIC: [8] Undefined variable: parent_menu_id D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 79 行.
+NOTIC: [8] Undefined variable: parent_menu D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 80 行.
+SQL: SELECT `id` FROM `zb_user` WHERE ( parentid = 39579 )  [ RunTime:0.0250s ]
+SQL: SELECT `id` FROM `zb_user` WHERE ( parentid in ('39580','39592','39606','39616','39624','39631','39645','39659','39673','39681','39687','39693','39697','39711','39724','39734','39743') )  [ RunTime:0.0280s ]
+SQL: SELECT `id` FROM `zb_user` WHERE ( parentid in ('39582','39583','39584','39585','39586','39587','39588','39589','39590','39591','39594','39595','39596','39597','39598','39599','39600','39601','39602','39603','39604','39605','39608','39609','39610','39611','39612','39613','39614','39615','39618','39619','39620','39621','39622','39623','39626','39627','39628','39629','39630','39633','39634','39635','39636','39637','39638','39639','39640','39641','39642','39643','39644','39647','39648','39649','39650','39651','39652','39653','39654','39655','39656','39657','39658','39661','39662','39663','39664','39665','39666','39667','39668','39669','39670','39671','39672','39675','39676','39677','39678','39679','39680','39683','39684','39685','39686','39689','39690','39691','39692','39695','39696','39699','39700','39701','39702','39703','39704','39705','39706','39707','39708','39709','39710','39713','39714','39715','39716','39717','39718','39719','39720','39721','39722','39723','39726','39727','39728','39729','39730','39731','39732','39733','39736','39737','39738','39739','39740','39741','39742','39745','39746','39747','39748','39749','39750','39751','39752','39753') )  [ RunTime:0.0280s ]
+
+[ 2016-06-16T10:03:35+08:00 ] ::1 /member/admin/consumptionRecord/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_module` [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0000s ]
+NOTIC: [2] array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #2 is not an array D:\xampp\htdocs\member\Application\Common\Behavior\InitModuleBehavior.class.php 第 27 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+NOTIC: [8] Use of undefined constant NOW_TIME - assumed 'NOW_TIME' D:\xampp\htdocs\member\ThinkPHP\Common\functions.php 第 596 行.
+SQL: SHOW COLUMNS FROM `zb_system_config` [ RunTime:0.0156s ]
+SQL: SELECT `value` FROM `zb_system_config` WHERE `name` = 'URL_MODEL' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitModuleBehavior [ RunTime:1.113615s ]
+INFO: [ app_init ] --END-- [ RunTime:1.115615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zb_user_group` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `zb_system_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1 AND `url` LIKE 'Admin/ConsumptionRecord/index%' ORDER BY pid desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `group` FROM `zb_user` WHERE `id` = 38077 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_system_module` WHERE `status` = 1  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: new_all_module_menu_list D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 63 行.
+SQL: SELECT * FROM `zb_system_menu` WHERE `status` = 1 AND `url` LIKE 'Admin/ConsumptionRecord/index%' ORDER BY pid desc LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: side_menu_list D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 77 行.
+NOTIC: [8] Undefined variable: parent_menu D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 78 行.
+NOTIC: [8] Undefined variable: parent_menu_id D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 79 行.
+NOTIC: [8] Undefined variable: parent_menu D:\xampp\htdocs\member\Application\Admin\Controller\AdminController.class.php 第 80 行.
+NOTIC: [8] Undefined index: ajax D:\xampp\htdocs\member\Application\Admin\Controller\ConsumptionRecordController.class.php 第 26 行.
+NOTIC: [8] Undefined index: p D:\xampp\htdocs\member\Application\Admin\Controller\ConsumptionRecordController.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `zb_xiaofei` [ RunTime:0.0040s ]
+SQL: SELECT SUM(fmoney) as fmoney,xf.username,xf.uid,u.platform,zbu.realname FROM zb_xiaofei as xf INNER JOIN zb_user u ON xf.payuid =u.id  INNER JOIN zb_user zbu ON zbu.id = xf.uid  GROUP BY xf.username,u.platform,xf.uid  HAVING SUM(fmoney)>0 ORDER BY u.platform ,xf.uid DESC  LIMIT 0,10   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `zb_xiaofei` [ RunTime:0.0050s ]
+SQL: SELECT SUM(fmoney) as total FROM `zb_xiaofei`  [ RunTime:0.0010s ]
+SQL: SELECT SUM(fmoney) as fmoney,xf.username,xf.uid,u.platform,zbu.realname FROM zb_xiaofei as xf INNER JOIN zb_user u ON xf.payuid =u.id  INNER JOIN zb_user zbu ON zbu.id = xf.uid  GROUP BY xf.username,u.platform,xf.uid  HAVING  SUM(fmoney)>0  [ RunTime:0.0110s ]
+

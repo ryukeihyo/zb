@@ -1,0 +1,94 @@
+<extend name="_Layout/main_ledger"/>
+
+<block name="style">
+    <link rel="stylesheet" href="__PUBLIC__/css/ledger.css">
+</block>
+<block name="libs">
+    <script src="__PUBLIC__/libs/chart/1.x/Chart.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/libs/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/ledger.js"></script>
+</block>
+
+<block name="container">
+
+    <div id="ledger_box">
+        <div id="ledger_tool_box">
+            <div id="income_tools_box">
+                <p>
+                    时间  从
+                    <input id="accounting_start_date" type="text">
+                    至
+                    <input id="accounting_end_date" type="text">                        
+                </p>
+                <div id="button_income">结算</div>
+            </div>
+            <div id="button_export_data">导出表单</div>
+        </div>
+
+        <p id="search_info"></p>
+        <p id="know_info"></p>
+        <div class="ledger_panes">
+
+            <div id="income_history_list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>结算开始时间</th>
+                            <th>结算结束时间</th>
+                            <th>备注</th>
+                            <th>操作查看</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <div class="page_list_box">
+                    <ul>
+                        <li id="call_ajax_url" class="active current"><a href="{:U('Admin/incomeStatistics/index')}">1</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div  id="income_son_list">                    
+                <table>
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>名称</th>
+                            <th>消费总额</th>
+                            <th>管理费总额</th>
+                            <th>比例</th>
+                            <th>提成</th>
+                            <th>管理</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <div class="page_list_box">
+                    <ul>
+                        <li class="active current"><a>1</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="confirm_box">
+        <h3>重要提示</h3>
+        结算操作完成后不可还原，请确认以下信息：
+        <p>开始时间：<br>结束时间：
+        </p>
+        <input id="confirm_yes" type="submit" value="确认" />
+        <input id="confirm_no" type="submit" value="取消" />
+    </div>
+
+    <div id="pop_box">
+        <div class="pop_box_close_button">X</div>
+        数据加载中，请稍候……
+    </div>
+</block>

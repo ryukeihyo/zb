@@ -1,0 +1,124 @@
+<extend name="_Layout/main"/>
+
+<block name="style">
+    <style type="text/css">
+        /* 文章列表样式 */
+        .article-list .media {
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        .article-list .list-cover{
+            width: 180px;
+            height: 100px;
+        }
+        .article-list .list-title{
+            margin-top: 6px;
+        }
+        .article-list .list-abstract{
+            height: 42px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        @media (max-width: 768px) {
+            .article-list .list-title{
+                font-size: 14px;
+                margin: 0px;
+            }
+            .article-list .list-cover{
+                width: 90px;
+                height: 66px;
+            }
+            .article-list .list-info {
+                font-size: 10px;
+                margin-top: 3px !important;
+                margin-bottom: 2px !important;
+            }
+            .article-list .list-abstract{
+                height: 36px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</block>
+
+<block name="main">
+    <div class="nrcx">
+            	<div class="nrcx_top"><p>会员注册</p></div>
+                
+                <div class="zclb">
+					<form method="post" action="{:U('Home/Memeber/regmember')}" onsubmit="return checkForm()">
+                	<table cellpadding="0" cellspacing="0" class="hyzc">
+                    	<tr>
+                        	<td>卡号：</td>
+                            <td><input type="text" id="usernamereg" name="username" maxlength="9" /></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td>姓名：</td>
+                            <td><input type="text" name="realname"  id="realname"/></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td>手机：</td>
+                            <td><input type="text" name="mobile"  id="mobile" maxlength="11" /></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td>商家：</td>
+                            <td><input type="text" name="managenumber" readonly value="{$info.username}" /></td>
+                        </tr>
+            
+                        
+                        <tr>
+                        	<td class="sub" colspan="2"><input type="reset" value="重置" style="width:101px; height:30px; margin-right:15px; float:right; font-size:16px; color:#fff;" /><input type="submit" value="注册" style="width:101px; height:30px; float:left; font-size:16px; color:#fff; margin-left:15px;" /></td>
+                        </tr>
+                    </table>
+                    </form>
+                </div>
+            </div>
+			
+			<script>
+		 
+		 function checkForm(){
+		 
+			if($("#usernamereg").val()==''){
+			
+				alert("卡号不能为空");
+				return false;
+			}
+
+			if($("#usernamereg").val().length<9){
+			
+				alert("卡号必须是9位数字");
+				return false;
+			}
+			
+			if($("#realname").val()==''){
+			
+				alert("姓名不能为空");
+				return false;
+			}
+			if($("#mobile").val()==''){
+			
+				alert("手机不能为空");
+				return false;
+			}
+
+			
+			var tel = $("#mobile").val();
+			 var reg = /^0?1[3|4|6|7|5|8][0-9]\d{8}$/;
+			 if (reg.test(tel)) {
+				 // alert("号码正确~");
+			 }else{
+				  alert("手机号码有误~");
+				  return false;
+			 };
+						
+			
+		 
+		 }
+		 
+		 </script>
+			
+			
+</block>

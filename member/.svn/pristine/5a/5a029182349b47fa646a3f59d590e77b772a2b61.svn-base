@@ -1,0 +1,130 @@
+<extend name="_Layout/main_ledger"/>
+
+
+<block name="libs">
+    <script src="__PUBLIC__/libs/chart/1.x/Chart.min.js"></script>
+</block>
+
+<block name="container">
+
+        <div id="ledger_side_box">
+            <nav id="ledger_nav">
+                <ul>
+                    <li><a href="../consumptionRecord/">消费记录</a></li>
+                    <li><a href="../rechargeBalance/">充值及余额</a></li>
+                    <li><a href="../membersNumber/">会员数量</a></li>
+                    <li><a href="../incomeStatistics/">收入统计</a></li>
+                </ul>
+            </nav>
+
+            <div>
+                <div id="regionalism_select_box">
+                    选择地区
+                    <select name="province_id">
+                        <option value="0">全国</option>
+                        <option value="38078">北京市-F110000</option>
+                        <option value="38099">天津市-F120000</option>
+                        <option value="38120">河北省-F130000</option>
+                        <option value="38315">山西省-F140000</option>
+                        <option value="38457">内蒙古自治区-F150000</option>
+                        <option value="38580">辽宁省-F210000</option>
+                        <option value="38709">吉林省-F220000</option>
+                        <option value="38787">黑龙江省-F230000</option>
+                        <option value="38945">上海市-F310000</option>
+                        <option value="38967">江苏省-F320000</option>
+                        <option value="39100">浙江省-F330000</option>
+                        <option value="39213">安徽省-F340000</option>
+                        <option value="39353">福建省-F350000</option>
+                        <option value="39457">江西省-F360000</option>
+                        <option value="39579">山东省-F370000</option>
+                        <option value="39754">河南省-F410000</option>
+                        <option value="39949">湖北省-F420000</option>
+                        <option value="40078">湖南省-F430000</option>
+                        <option value="40228">广东省-F440000</option>
+                        <option value="40390">广西壮族自治区-F450000</option>
+                        <option value="40528">海南省-F460000</option>
+                        <option value="40557">重庆市-F500000</option>
+                        <option value="40600">四川省-F510000</option>
+                        <option value="40821">贵州省-F520000</option>
+                        <option value="40922">云南省-F530000</option>
+                        <option value="41076">西藏自治区-F540000</option>
+                        <option value="41158">陕西省-F610000</option>
+                        <option value="41286">甘肃省-F620000</option>
+                        <option value="41399">青海省-F630000</option>
+                        <option value="41452">宁夏回族自治区-F640000</option>
+                        <option value="41484">新疆维吾尔自治区-F650000</option>
+                    </select>
+                </div>
+
+                <select name="city" disabled="disabled">
+                    <option></option>
+                </select>
+                <select name="county" disabled="disabled">
+                    <option></option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <div id="ledger_box">
+            <div id="ledger_tool_box">
+                <div id="search_tools_box">
+                    <ul id="search_input_list">
+                        <li>
+                            时间  从<input id="start_date" type="date">
+                            至<input id="end_date" type="date">
+                        </li>
+                        <li id="button_deadline">
+                            <span id="button_week" >最近一周</span>
+                            <span id="button_month" >最近一月</span>
+                            <span id="button_trimester">最近三个月</span>
+                            <span id="button_year">最近一年</span>
+                        </li>
+                        <li>
+                            区域 <input id="area_id" type="text" placeholder="区域代码">                        
+                        </li>
+                    </ul>
+                    <div id="button_search">查询</div>
+                </div>
+                <div id="button_export_data">导出表单</div>
+            </div>
+            <div class="ledger_tabs">
+                <ul id="xaiofei_button_list">
+                    <li class="current"><a href="#" rel="xiaofei">消费总额</a></li>
+                    <li><a href="#" rel="xianjin">现金支付记录</a></li>
+                    <li><a href="#" rel="zebaib">泽百币支付记录</a></li>
+                    <li><a href="#" rel="yucun">预存支付记录</a></li>
+                </ul>
+            </div>
+            <p id="search_info"></p>
+            <p id="know_info"></p>           
+            <div id="xiaofei_table_list" class="ledger_panes">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>商家名称</th>
+                            <th>消费金额</th>
+                            <th>时间</th>
+                            <th>用户</th>
+                            <th>备注</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+            </div>
+            <div id="page_list_box">
+                <ul>
+                    <li class="active current"><a href="{:U('Admin/ConsumptionRecord/index')}">1</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="pop_box">
+            弹出提示
+            <div class="pop_box_close_button">X</div>
+        </div>
+</block>

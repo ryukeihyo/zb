@@ -1,0 +1,75 @@
+<extend name="_Layout/main_ledger"/>
+
+<block name="style">
+    <link rel="stylesheet" href="__PUBLIC__/css/ledger.css">
+</block>
+<block name="libs">
+    <script src="__PUBLIC__/libs/chart/1.x/Chart.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/libs/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/laydate/laydate.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/ledger.js"></script>
+</block>
+
+<block name="container">
+
+    <div id="ledger_box">
+        <div id="ledger_tool_box">
+            <div id="search_tools_box">
+                <ul id="search_input_list">
+                    <li>
+                        时间  从<input id="start_date" type="text">
+                        至<input id="end_date" type="text">
+                    </li>
+                    <li id="button_deadline">
+                        <span id="button_day" >近一天</span>
+                        <span id="button_week" >近一周</span>
+                        <span id="button_month" >近一月</span>
+                        <span id="button_trimester">近三个月</span>
+                        <span id="button_halfyear">近半年</span>
+                        <span id="button_year">近一年</span>
+                    </li>
+
+                </ul>
+                <!--<div id="button_search">查询</div>-->
+            </div>
+            <div id="button_export_data">导出表单</div>
+        </div>
+        <div class="ledger_tabs">
+            <ul id="xaiofei_button_list">
+                <li id="load_start_click"><a href="#" rel="xiaofei">消费总额</a></li>
+                <li><a href="#" rel="xianjin">现金支付记录</a></li>
+                <li><a href="#" rel="zebaib">泽百币支付记录</a></li>
+                <li><a href="#" rel="yucun">预存支付记录</a></li>
+            </ul>
+        </div>
+        <p id="search_info"></p>
+        <p id="know_info"></p>           
+        <div id="xiaofei_table_list" class="ledger_panes">
+            <table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>商家名称</th>
+                        <th>消费金额</th>
+                        <th>时间</th>
+                        <th>用户</th>
+                        <th>备注</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+        </div>
+        <div id="xiaofei_page_list" class="page_list_box">
+            <ul>
+                <li id="call_ajax_url" class="active current"><a href="{:U('Admin/ConsumptionRecord/index')}">1</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="pop_box">
+        <div class="pop_box_close_button">X</div>
+        数据加载中，请稍候……
+    </div>
+</block>

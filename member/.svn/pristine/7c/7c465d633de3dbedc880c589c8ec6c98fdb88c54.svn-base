@@ -1,0 +1,44 @@
+<?php
+// +----------------------------------------------------------------------
+// | CoreThink [ Simple Efficient Excellent ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2014 http://www.corethink.cn All rights reserved.
+// +----------------------------------------------------------------------
+// | Author: liujb
+// +----------------------------------------------------------------------
+namespace Admin\Controller;
+use Think\Controller;
+/**
+ * 充值及余额控制器
+ * @author liujb
+ */
+class RechargeBalanceController extends AdminController
+{
+
+    /**
+     * 充值及余额控制器
+     * author liujb 20160617
+     */
+    public function index(){
+        if($_POST['ajax']) {
+            $money_type = $_POST['money_type'];
+            $area_id   = $_POST['area_id'];
+            $area_type = $_POST['area_type'];
+            $p = $_GET['p']?$_GET['p']:1;
+
+           // $this->search_record($area_id,$area_type,$jilu_type,$p);
+
+        }else{
+            $this->display('');
+        }
+    }
+
+    /**
+     * 金额查询
+     * @author liujb 20160617
+     */
+    public function search_money($money_type,$area_id,$area_type,$p){
+        
+    }
+}
+?>

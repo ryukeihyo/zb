@@ -1,0 +1,119 @@
+<extend name="_Layout/main"/>
+
+<block name="var">
+    "current_version": "{:C('CURRENT_VERSION')}",
+    "check_version_url": "{:U('Admin/SystemUpdate/checkVersion')}",
+    "index_url": "{:U('Index/index')}",
+    "user_reg_date": {:$user_reg_date},
+    "user_reg_count": {:$user_reg_count}
+</block>
+
+<block name="libs">
+    <script src="__PUBLIC__/libs/chart/1.x/Chart.min.js"></script>
+</block>
+
+<block name="container">
+    <div class="container">
+		<div class="chart">
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-6 col-md-12">
+                    <div class="panel panel-default" style="padding:50px">
+                        
+						<!--<button id="geren">个人结算(上次结算时间：<span style="color:red">{$lasttime}</span>)</button>   -->
+						<button	id="shangjia">分支机构结算(上次结算时间：<span style="color:red">{$slasttime}</span>)</button>  
+						<button	id="yewuyuan">业务员结算(上次结算时间：<span style="color:red">{$ylasttime}</span>)</button>
+						
+                    </div>
+                </div>
+
+            </div>
+        </div>
+	
+	
+		<script>
+		$(function(){
+		
+			$("button#geren").click(function(){
+			
+				$("button#geren").find("span").html('结算中，请稍后.....');
+			
+				$.post("{:U('Admin/Index/pay')}", { type: 1,usertype:6 },
+				   function(data){
+					 if(data){
+						$("button#geren").find("span").html(data);
+						alert("个人结算成功");
+					 
+					 }else{
+						alert("个人结算失败");
+					 }
+				   });
+			
+			
+				
+			})
+			$("button#shangjia").click(function(){
+			
+				
+				$("button#shangjia").find("span").html('结算中，请稍后.....');
+			
+				$.post("{:U('Admin/Index/pay')}", { type: 2,usertype:5 },
+				   function(data){
+					 if(data){
+						$("button#shangjia").find("span").html(data);
+						alert("商家结算成功");
+					 
+					 }else{
+						alert("商家结算失败");
+					 }
+				   });
+				
+				
+				
+				
+				
+			})
+		
+		
+			$("button#yewuyuan").click(function(){
+			
+				
+				$("button#yewuyuan").find("span").html('结算中，请稍后.....');
+			
+				$.post("{:U('Admin/Index/pay')}", { type: 3,usertype:9 },
+				   function(data){
+					 if(data){
+						$("button#yewuyuan").find("span").html(data);
+						alert("业务员结算成功");
+					 
+					 }else{
+						alert("业务员结算失败");
+					 }
+				   });
+				
+				
+				
+				
+				
+			})
+		
+		
+		
+		
+		})
+		
+		</script>
+	
+
+
+        
+
+
+        <div class="footer text-muted">
+            <span>版权所有 © 2014-<php>echo date("Y",time());</php></span>
+            <a href="{:C('WEBSITE_DOMAIN')}" class="text-muted" target="_blank">{:C('PRODUCT_NAME')} v{:C('CURRENT_VERSION')}</a>
+            <a href="{:C('WEBSITE_DOMAIN')}" class="text-muted" target="_blank">{:C('COMPANY_NAME')}</a> 
+            <a class="text-muted pull-right">项目开发团队：{:C('DEVELOP_TEAM')}</a>
+        </div>
+    </div>
+</block>
